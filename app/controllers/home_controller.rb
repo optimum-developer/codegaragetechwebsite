@@ -2,7 +2,10 @@ class HomeController < ApplicationController
 	def index
 	end
 
-	def our_work
+	def services
+	end
+
+	def work
 	end
 
 	def about_us
@@ -12,6 +15,10 @@ class HomeController < ApplicationController
 	end
 
 	def blog
+	end
+
+	def team
+		
 	end
 
 end
