@@ -12,13 +12,15 @@ class HomeController < ApplicationController
 	end
 
 	def contact
+		@new_contact=Contact.new
 	end
 
 	def blog
 	end
 
-	def team
-		
+
+	def single_blog
+
 	end
 
 end
