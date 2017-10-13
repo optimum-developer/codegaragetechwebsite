@@ -1,0 +1,27 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= form_for @blog do |form| %>
+
+<p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', blogs_path %>
+
+ 
