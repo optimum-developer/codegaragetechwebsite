@@ -12,5 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-
+//= require jquery-2.1.4.min.js
 //= require_tree .

@@ -7,8 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <%= csrf_meta_tags %>
+
         <!-- title -->
-        <title>Lite - Digital Agency HTML Template </title>
+        <title>Code Garage Tech</title>
         
         <!-- Favicon -->
         <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
@@ -35,7 +37,15 @@
 
          
         <!-- jQuery javascript library -->
-        <script src="/assets/jquery-2.1.4.min.js"></script>
+
+        <%= javascript_include_tag 'application.js' %>
+        
+        <script>
+            $(document).ready(function() {
+  $('li.active').removeClass('active');
+  $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+});
+        </script>       
         
     
 
@@ -69,7 +79,7 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="index.html"><img class="img-responsive" src="/assets/logo1.png" alt="Site Logo"></a>
+                            <a class="navbar-brand" href="<%=root_path%>"><img class="img-responsive" src="/assets/logo1.png" alt="Site Logo"></a>
                         </div>
                     </div>
 
@@ -84,8 +94,14 @@
                                     </li>
                                     <li><a class="smoth-scroll" href="<%=home_blog_path%>">blog</a>
                                     <li><a class="smoth-scroll" href="<%=home_about_us_path%>">about_us</a></li>    
+
                                     </li>
                                     <li><a class="smoth-scroll" href="<%=home_contact_path%>">contact</a></li>
+                                    <%if current_admin.present?%>
+                                     <li><a class="smoth-scroll" href="<%=edit_admin_registration_path%>">EDIT PROFILE</a></li>
+                                     <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
+
+                                    <%end%>
                                 </ul>
                             </nav>
                         </div>
@@ -97,7 +113,6 @@
         
     <%= yield %>
 
-                 
          <!--====== FOOTER AREA ======-->
         <footer class="main-footer">
         <div class="footer-top">
@@ -122,6 +137,7 @@
                                 <li><i  class="fa fa-mobile " style="font-size: 34px; margin-right: 15px; font-size: 45px;"></i> 0172-5053786</li>
                                 <li><i  class="fa fa-envelope-o" style="font-size: 27px; margin-right: 10px;"></i> info@codegaragetech.com</li>
 
+
                                 <li><i  class="fa fa-skype" style="font-size: 34px; margin-right: 8px;"></i> career@codegaragetech.com</li>
                             </ul>
                         </div>                           
@@ -145,15 +161,10 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="newsletter">
                             <div class="sec-title">
-                                <h5>Subcribe to Our Newsletter</h5>
+                                <h5>Check us On Social Networks</h5>
                             </div>
-                            
-                            <form name="contact_form" class="default-form contact-form" action="http://html.tonatheme.com/2017/Consultx/sendmail.php" method="post">                               
-                                <input type="email" name="email" placeholder="Enter Email" required="">
-                                <button type="submit"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
-                            </form>
-                            <ul class="social-links">
-                                <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                            <ul class="social-links" style="margin-right:55px">
+                                <li ><i class="fa fa-facebook" aria-hidden="true" onclick="location='https://www.facebook.com/CodeGarageTech/'"></i></a></li>
                                 <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-linkedin" aria-hidden="true"></i></li>
@@ -165,6 +176,9 @@
         </div>
 
     </footer>
+
+                       <div class="map" style="display:none"></div>
+          
 
     <footer class="lite-footer-area" style="margin-top: -94px; text-align:center"> 
             <div class="container"  >

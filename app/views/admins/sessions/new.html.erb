@@ -1,0 +1,71 @@
+<br>
+<br>
+        <!--====== CONTACT INFO AREA ======-->
+        <div id="contact" class="contact-info-area section-padding">
+            <div class="container">
+
+                <div class="row">
+
+                          
+
+                    <div class="col-md-8 col-md-offset-2">
+               <h2>Log in</h2>
+
+                        <div class="contact-form-area">
+                          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                            
+                            
+                                <div class="messages"></div>
+                                <div class="controls">
+                                    <div class="row">
+                                        
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_email" type="email" name="admin[email]" class="form-control" placeholder="Email" required="required" data-error="Valid email is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                   <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_name" type="password" name="admin[password]" class="form-control" placeholder="password" required="required" data-error="Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+
+                                    <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                 <div class="field">
+                                                  <%= f.check_box :remember_me %>
+                                                  <%= f.label :remember_me %>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    
+
+                                    
+                                    
+
+                                    
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="submit" class="filled-btn" name="commit" value="LOGIN">
+                                        </div>
+                                    </div> <!--/.row-->
+<%= render "admins/shared/links" %>
+                                    
+                                </div>
+                            <%end%>
+                        </div>
+                    </div>
+                </div> <!--/.row-->
+            </div><!--/.container-->
+        </div>
+
+
+
+
+

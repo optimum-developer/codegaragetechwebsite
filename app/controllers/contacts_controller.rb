@@ -8,6 +8,8 @@ class ContactsController < ApplicationController
      		cont_email=@new_contact_us.email
      		cont_name=@new_contact_us.name
      		MailUserMailer.send_mail_to_user(cont_email).deliver
+            MailUserMailer.send_mail_to_admin.deliver
+
 
      		
         end

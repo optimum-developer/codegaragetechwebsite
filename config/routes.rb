@@ -1,5 +1,9 @@
 
 Rails.application.routes.draw do
+  get 'admins/sign_up'=>'home#about_us'
+  
+  devise_for :admins
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'home#index'
 
@@ -19,6 +23,8 @@ Rails.application.routes.draw do
 
 
   resources :contacts
+  resources :subscribes
+
 
 
 end

@@ -23,7 +23,7 @@
                                <p style="text-align: justify;"><%=blog.text.html_safe%></p>
                              <a class="read-more-btn" href="<%= blog_path(blog) %>">Show</a>
                              <a class="read-more-btn" href="<%= edit_blog_path(blog) %>">Edit</a>
-                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Delete</a>
+                             <%= link_to('Delete', blog_path(blog), method: :delete,class: "read-more-btn") %>
                            </div>
                            <%end%>
                        </div>
