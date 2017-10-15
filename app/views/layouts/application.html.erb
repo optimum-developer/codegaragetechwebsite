@@ -32,17 +32,12 @@
         
         <!-- responsive css -->
         <link href="/assets/responsive.css" rel="stylesheet">
-        
+
+         
         <!-- jQuery javascript library -->
         <script src="/assets/jquery-2.1.4.min.js"></script>
-        <script>
-            $(document).ready(function() {
-  $('li.active').removeClass('active');
-  $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
-});
-        </script>       
         
-
+    
 
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -55,21 +50,18 @@
     <body>
         
         <!--===== Preloader ====-->
+
         <div class="preloader-wrapper">
-            <div class="spinner">
-              <div class="rect1"></div>
-              <div class="rect2"></div>
-              <div class="rect3"></div>
-              <div class="rect4"></div>
-              <div class="rect5"></div>
-            </div>
+            <i class="fa fa-cog fa-spin fa-5x fa-fw" style="font-size: 100px;position: absolute; top: 50%; left: 45%; color: blue;"></i>
+            
         </div>
+
 
         <!--===== HEADER AREA =====-->
         <header class="navbar custom-navbar navbar-fixed-top top-nav-collapse">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="col-md-3 col-sm-3 col-xs-12"  >
                         <div class="navbar-header">
                             <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                                 <span class="sr-only">Toggle navigation</span>

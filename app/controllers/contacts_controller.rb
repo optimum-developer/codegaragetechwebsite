@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
 	def create
     	@new_contact_us=Contact.new(contact_params)
-        puts "bhjjgh"
+        
         debugger
 
      	if @new_contact_us.save

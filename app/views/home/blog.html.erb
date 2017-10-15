@@ -23,46 +23,28 @@
                            <div class="lite-post-featured-content">
                                 <img src="/assets/blog/blog1.jpg" class="img-responsive" alt="">
                             </div>
-                           <a href="<%=home_blog_path%>"><h2>Importance of Opting Ruby on Rails for Business Development</h2></a>
+                            <% @blogs.each do |blog| %>
+                            
+                            
+                           <a href="<%=home_blog_path%>"><h2><%= blog.title %></h2></a>
                            <div class="entry-meta">
-                               <span class="posted-on">Posted on: <a href="#">22 August 2016 </a></span>
-                               <span class="posted-by"> by: <a href="#">John Doe</a></span>
+                               <span class="posted-on"> <%= blog.updated_at.strftime("%d-%m-%y %H:%M:%S")  %>: <a href="#"> </a></span>
+                               <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
                            </div>
                            <div class="entry-content">
-                               <p>Ruby on Rails may be an organic process framework for making web-based applications. It includes a development tool named Rails and a programing language referred to as Ruby. </p>
-                               <p>Yukihiro Matsumoto created Ruby within the mid-1990s to attenuate the frustration and an effort concerned in complicated committal to writing comes. The language compiled the most effective options of the dominant languages of that time: It's quick and meticulous at constant time and compared to alternative fashionable languages like C, BASIC, C++, PERL et al., its structure together with the syntax, synchronic linguistics and culture is taken into account to be easier and easier to find out. </p>
-                                                         
-                             <a class="read-more-btn" href="<%=home_blog_page_1_path%>">Read More</a>
+                           
+                           
+                            
 
-                             <h2>Benefits of exploitation Ruby on Rails over different Frameworks</h2>
-                             <div class="entry-meta">
-                                 <span class="posted-on">Posted on: <a href="#">22 August 2016 </a></span>
-                                 <span class="posted-by"> by: <a href="#">John Doe</a></span>
-                             </div>
-                             <p>• It uses Agile package development methodology that applies a cooperative approach between cross purposeful groups for locating apt solutions. This ultimately promotes adaptive coming up with and development, quick delivery, scope for improvement and encourages speedy and versatile responses mitigating hurdles. </p>
+                               <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>
+                                
 
-                             <p>• Object-oriented or easy nature of the artificial language Ruby, and therefore the access to an enormous library of open ASCII text file among the Rails user community. </p>
-
-                             <a class="read-more-btn" href="<%=home_blog_page_2_path%>">Read More</a>
-
-                             <h2> How to Protect Your Website from Negative SEO</h2>
-                             <div class="entry-meta">
-                                 <span class="posted-on">Posted on: <a href="#">22 August 2016 </a></span>
-                                 <span class="posted-by"> by: <a href="#">John Doe</a></span>
-                             </div>
+                                                          
+                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Read More</a>
                              
-                             <p>• The whole SEO industry encountered a major change in the course of recent years. As a result, many online advertisers have drastically changed their strategies. ranking high in Google for focused keywords isn't as simple as it was three years ago. </p>
-
-                             <p>• Is your website suddenly loading slowly or constantly crashing? Is your site getting Visitors from a wide range of uncommon referrers? Is it accurate to say that you are getting besieged with bad online reviews? Has your site dropped a few spots in the search rankings? . </p>
-
-                             <p>Provided that this is true, you may be a victim of negative SEO.  </p>
-
-
-                             <a class="read-more-btn" href="<%=home_blog_page_2_path%>">Read More</a>
-
-
-
+                             
                            </div>
+                           <%end%>
                        </div>
                        
 
@@ -168,10 +150,10 @@
                     <div class="widget recent-post"> <!-- widget single -->
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
-                            <li><a href="#">Perspiciatis voluptatum fugit voluptate expedita repellat<span>21st Nov, 2016</span></a></li>
-                            <li><a href="#">Perspiciatis voluptatum fugit voluptate expedita repellat<span>21st Nov, 2016</span></a></li>
-                            <li><a href="#">Perspiciatis voluptatum fugit voluptate expedita repellat<span>21st Nov, 2016</span></a></li>
-                            <li><a href="#">Perspiciatis voluptatum fugit voluptate expedita repellat<span>21st Nov, 2016</span></a></li>
+                            <li><a href="#">Importance of Opting Ruby on Rails for Business Development<span>21st Nov, 2016</span></a></li>
+                            <li><a href="#">Benefits of exploitation Ruby on Rails over different Frameworks<span>21st Nov, 2016</span></a></li>
+                            <li><a href="#">How to Protect Your Website from Negative SEO <span>21st Nov, 2016</span></a></li>
+                            
                         </ul>
                     </div>
                     
@@ -207,3 +189,7 @@
            </div>
         </div>
      
+     
+
+
+

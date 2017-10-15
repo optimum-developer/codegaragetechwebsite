@@ -17,6 +17,7 @@ class HomeController < ApplicationController
 	end
 
 	def blog
+		@blogs = Blog.all
 	end
 
 	def blog_page_1 
@@ -29,6 +30,8 @@ class HomeController < ApplicationController
 	end
 
    
+    
+  
 	
 
 	

@@ -1,6 +1,7 @@
-class BlogsController < ApplicationController
+class BlogsController <  ApplicationController
 
-http_basic_authenticate_with name: "dhh", password: "secret" , except: [:show]
+
+  
 
   def index
     @blogs = Blog.all
@@ -19,13 +20,13 @@ http_basic_authenticate_with name: "dhh", password: "secret" , except: [:show]
   end
  
   def create
+
+    
     @blog = Blog.new(blog_params)
- 
-    if @blog.save
-      redirect_to @blog
-    else
-      render 'new'
-    end
+     
+
+    @blog.save
+    redirect_to blogs_path
   end
  
   def update
@@ -38,12 +39,12 @@ http_basic_authenticate_with name: "dhh", password: "secret" , except: [:show]
     end
   end
  
-  def destroy
-    @blog = Blog.find(params[:id])
-    @blog.destroy
- 
-    redirect_to blogs_path
-  end
+    def destroy
+      @blog = Blog.find(params[:id])
+      @blog.destroy
+   
+      redirect_to blogs_path
+    end
      
   private
     def blog_params

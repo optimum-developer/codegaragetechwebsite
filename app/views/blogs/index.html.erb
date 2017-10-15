@@ -1,26 +1,38 @@
-<br>
-<br>
-<br>
-<br>
+<!--===== BREADCROUMB AREA =====-->
+        <div class="lite-breadcroumb-area" data-stellar-background-ratio="0.6" style="background-image: url(/assets/blog-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>List of  blogs</h1>
+                        <div class="breadcroumb">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--===== SINGLE POST AREA =====-->
+        <div class="blog-area">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-8">
+                       <div class="single-post-details">
+                            <% @blogs.each do |blog| %>
+                           <a href="<%=home_blog_path%>"><h2><%= blog.title %></h2></a>
+                           <div class="entry-content">
+                               <p style="text-align: justify;"><%=blog.text.html_safe%></p>
+                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Show</a>
+                             <a class="read-more-btn" href="<%= edit_blog_path(blog) %>">Edit</a>
+                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Delete</a>
+                           </div>
+                           <%end%>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+     
+     
 
-<h1>Listing Articles</h1>
-<%= link_to 'New article', new_blog_path %>
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Text</th>
-    <th colspan="3"></th>
-  </tr>
- 
-  <% @blogs.each do |blog| %>
-    <tr>
-      <td><%= blog.title %></td>
-      <td><%= blog.text %></td>
-      <td><%= link_to 'Show', blog_path(blog) %></td>
-      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-      <td><%= link_to 'Destroy', blog_path(blog),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  <% end %>
-</table>
+
+

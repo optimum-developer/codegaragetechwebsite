@@ -3,24 +3,48 @@
 <br>
 
 
-<h1>Edit Blogs</h1>
- 
+<h1 style="text-align: center; color: blue;">Edit Blog</h1>
+                <div class="row"  >
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="contact-form-a  rea">
+                            <%= form_for @blog do |f| %>
+                            
+                                <div class="messages"></div>
+                                <div class="controls">
+                                    <div class="row" ">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
 
- <%= form_for @blog do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p>
+                                                <input  id="form_name" type="text" name="blog[title]" value="<%=@blog.title%>" class="form-control" placeholder="Title" required="required" data-error="Name is required."  >
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div> <!--/.row-->
+
+                                    </div> <!--/.row-->
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group text-area">
+                                                <textarea id="form_message" name="blog[text]" class="form-control" placeholder="Content" rows="7" required="required" data-error="Please,leave us a message."><%=@blog.text%></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="submit" class="filled-btn" value="Update Blog">
+                                        </div>
+                                    </div> <!--/.row-->
+                                </div>
+                            <%end%>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+                    <br>
+                </div> <!--/.row-->
  
-  <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
- 
-  <p>
-    <%= form.submit %>
-  </p>
- 
-<% end %>
- 
-<%= link_to 'Back', blogs_path %>
