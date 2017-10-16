@@ -1,8 +1,6 @@
 class ContactsController < ApplicationController
 	def create
     	@new_contact_us=Contact.new(contact_params)
-        
-        debugger
 
      	if @new_contact_us.save
      		cont_email=@new_contact_us.email
@@ -13,13 +11,13 @@ class ContactsController < ApplicationController
 
      		
         end
-        redirect_to home_contact_path
+        redirect_to :back
     end
 
     private
 	  def contact_params
-        
 	    params.require(:contact).permit(:name,:email,:subject,:message)
 	  end
+    
 	
 end

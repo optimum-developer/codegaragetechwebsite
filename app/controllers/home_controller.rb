@@ -9,6 +9,7 @@ class HomeController < ApplicationController
 	end
 
 	def about_us
+		@new_contact=Contact.new
 	end
 
 	def contact
