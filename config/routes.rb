@@ -1,6 +1,6 @@
 
 Rails.application.routes.draw do
-  get 'admins/sign_up'=>'home#about_us'
+  #get 'admins/sign_up'=>'home#about_us'
   
   devise_for :admins
   
@@ -16,12 +16,6 @@ Rails.application.routes.draw do
 
 
   resources :blogs
-
-  get 'home/blog_page_1'=>'home#blog_page_1'
-  get 'home/blog_page_2'=>'home#blog_page_2'
-  get 'home/blog_page_3'=>'home#blog_page_3'
-
-
   resources :contacts
   resources :subscribes
 

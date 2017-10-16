@@ -1,7 +1,6 @@
 class BlogsController <  ApplicationController
 
-  before_filter :authenticate_admin!, only: [:new, :create,:edit,:update,:destroy,:index]
-
+before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
   def index
     @blogs = Blog.all
   end

@@ -34,17 +34,18 @@
         
         <!-- responsive css -->
         <link href="/assets/responsive.css" rel="stylesheet">
-
+        <link href="/assets/cog.css" rel="stylesheet">
          
         <!-- jQuery javascript library -->
 
         <%= javascript_include_tag 'application.js' %>
         
         <script>
+
             $(document).ready(function() {
-  $('li.active').removeClass('active');
-  $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
-});
+                            $('li.active').removeClass('active');
+             $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+             });
         </script>       
         
     
@@ -60,11 +61,12 @@
     <body>
         
         <!--===== Preloader ====-->
-
-        <div class="preloader-wrapper">
-            <i class="fa fa-cog fa-spin fa-5x fa-fw" style="font-size: 100px;position: absolute; top: 50%; left: 45%; color: blue;"></i>
-            
-        </div>
+             <div class="preloader-wrapper">
+                <div id="loader" class="overlay-loader">
+                 <div class="loader-background color-flip"></div>
+                  <img class="loader-icon spinning-cog" src="/assets/cog24.svg" data-cog="cog01">
+                </div>
+            </div>
 
 
         <!--===== HEADER AREA =====-->
@@ -234,6 +236,10 @@
         
         <!-- active js -->
         <script src="/assets/active.js"></script>
+
+        <script src="/assets/cog-example.js"></script>
+
+
     </body>
 
 <!-- Mirrored from programmerhasan.com/demos/lite/lite/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 03 Oct 2017 09:45:06 GMT -->

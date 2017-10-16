@@ -28,7 +28,7 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group text-area">
-                                                <textarea id="form_message" name="blog[text]" class="form-control" placeholder="Content" rows="7" required="required" data-error="Please,leave us a message."><%=@blog.text%></textarea>
+                                            <%= f.cktext_area :text %>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
