@@ -64,5 +64,5 @@ config.action_mailer.smtp_settings = {
 :enable_starttls_auto => true
 }
 
-config.action_mailer.default_url_options = { host: '54.244.191.45'  port: 80 }
+config.action_mailer.default_url_options = { host: '54.244.191.45' , port: 80 }
 end
