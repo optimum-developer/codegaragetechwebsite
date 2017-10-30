@@ -1,6 +1,6 @@
 
 Rails.application.routes.draw do
-  #get 'admins/sign_up'=>'home#about_us'
+   get 'admins/sign_up'=>'home#about_us'
   
   devise_for :admins
   
