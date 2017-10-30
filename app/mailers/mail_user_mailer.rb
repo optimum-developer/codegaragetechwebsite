@@ -1,5 +1,5 @@
 class MailUserMailer < ApplicationMailer
-  default from: 'amanthecool912.ab@gmail.com'
+  default from: "amandeepkaur@codegaragetech.com"
 	
 	def send_mail_to_user(user)
 		mail(:to=>user,:subject=>"Request Confirmation")
@@ -7,7 +7,7 @@ class MailUserMailer < ApplicationMailer
 
 
 	def send_mail_to_admin
-		mail(:to=>"amanthecool912.ab@gmail.com",:subject=>"Contact Request")
+		mail(:to=>"amandeepkaur@codegaragetech.com",:subject=>"Contact Request")
 	end
 
 
