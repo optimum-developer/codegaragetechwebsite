@@ -11,6 +11,7 @@ class ContactsController < ApplicationController
 
      		
         end
+        flash[:notice] = 
         redirect_to :back
     end
 

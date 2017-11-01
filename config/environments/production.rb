@@ -54,8 +54,8 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   
   ActionMailer::Base.smtp_settings = {
-   :user_name => 'amanthecool912@gmail.com',
-   :password => '7418869442@',
+   :user_name => 'amandeepkaur@codegaragetech.com',
+   :password => 'Amandeep!@#',
    :domain => 'codegaragetech.com',
    :address => 'smtp.gmail.com',
    :port => 587,

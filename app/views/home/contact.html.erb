@@ -1,4 +1,10 @@
 
+<script>
+<%if flash[:notice].present?%>
+        $.notify("Thanks for your query. We will you contact you soon.", "success");
+      <%end%>
+</script>
+
         <!--====== CONTACT INFO AREA ======-->
         <div id="contact" class="contact-info-area section-padding">
             <div class="container">
