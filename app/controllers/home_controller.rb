@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
 	def index
+	@blogs = Blog.all.last(3)
 	end
 
 	def services

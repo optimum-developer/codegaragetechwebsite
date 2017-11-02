@@ -152,9 +152,10 @@
                     <div class="widget recent-post"> <!-- widget single -->
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
-                            <li><a href="#">Importance of Opting Ruby on Rails for Business Development<span>21st Nov, 2016</span></a></li>
-                            <li><a href="#">Benefits of exploitation Ruby on Rails over different Frameworks<span>21st Nov, 2016</span></a></li>
-                            <li><a href="#">How to Protect Your Website from Negative SEO <span>21st Nov, 2016</span></a></li>
+                            <% @blogs.each do |blog| %>
+                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.created_at.strftime("%d-%m-%y %H:%M:%S")  %></span></a></li>
+                            <% end  %>
+                            
                             
                         </ul>
                     </div>
