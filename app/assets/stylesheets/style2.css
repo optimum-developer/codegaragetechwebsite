@@ -130,7 +130,8 @@ p{
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: 400;
-	color: #848484;
+	/*color: #848484;*/
+	color: black;
 	font-family: 'Open Sans', sans-serif;
 }
 .strike-through{
@@ -191,7 +192,8 @@ ul,li{
 	font-weight: 400;
 	line-height: 50px;
 	color: #222222;
-	padding-bottom: 30px;
+	/*padding-bottom: 30px;*/
+	padding-bottom: 15px;
 }
 .btn-style-one{
 	font-size: 14px;

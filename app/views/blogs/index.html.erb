@@ -18,10 +18,10 @@
                    <div class="col-md-8">
                        <div class="single-post-details">
                             <% @blogs.each do |blog| %>
-                           <a href="<%=home_blog_path%>"><h2><%= blog.title %></h2></a>
+                           <a href="<%=blog_path%>"><h2><%= blog.title %></h2></a>
                            <div class="entry-content">
                                <p style="text-align: justify;"><%=blog.text.html_safe%></p>
-                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Show</a>
+                             <a class="read-more-btn" href="<%= blogs_path(blog) %>">Show</a>
                              <a class="read-more-btn" href="<%= edit_blog_path(blog) %>">Edit</a>
                              <%= link_to('Delete', blog_path(blog), method: :delete,class: "read-more-btn") %>
                            </div>

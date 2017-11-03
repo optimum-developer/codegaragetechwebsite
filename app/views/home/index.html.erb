@@ -11,7 +11,7 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="slide-content">
                                     <h2 class="tittle">Welcome to  <span style="color:rgb(1, 123, 251)">C<i class="fa fa-cog fa-spin" style="font-size: 40px;"></i>DE GARAGE</span></h2>
-                                    <p>We Build Valuable Solutions With Code</p>
+                                    <p style="color: #848484;">We Build Valuable Solutions With Code</p>
                                     
                                 </div>
                             </div>
@@ -24,18 +24,19 @@
         <!--===== SERVICE AREA =====-->
         <div id="service" class="lite-service-area section-padding">
             <div class="container">
-               <div class="row">
-                    <div class="col-md-8 col-md-offset-2" >
-                      <div class="section-title text-center">
+                <!--  -->
+                 <div class="row">
+                    <div class="col-md-12" >
+                      <div class="section-title text-center" style="    line-height: 11px;">
                            <h2>C<i class="fa fa-cog fa-spin" style="font-size: 40px;"></i>DE GARAGE TECH - ROR Expert</h2>
                            <span class="border-center"></span>
-                           <p style="text-align: justify;"> We at Code Garage Tech, is a dedicated team of ROR experts that ensure you to offer the most valuable code in form of a software or a website and will turn your ideas into reality. We're Full Stack Developers, which implies that we won't let you down when we have to roll out improvements to any piece of your project. We compose future-proof</p><p align="center"> backends that can speak with any kind of the year Javascript Framework. </p><br>
-                           <p style="text-align: justify;"> Our website development professionals recognize the value of solid information architecture design and integrative branding that engages the customer from the first stop at your site. We are Just a firmly incorporated group with exceptionally learned developers can convey in high caliber at the speed you require. We are flexible in timings. We believe in the long-term relationship between your business and our duty. We specialize in custom PHP web</p><p align="center"> application development, Wordpress, Android,Ruby on Rails, Seo Optimization and Node JS. </p><br>
-                           <p style="text-align: center;">We are flexible in timings. We believe in long term relationship for your business and our duty.</p>
+                           <p style="text-align: justify;"> We at Code Garage Tech, is a dedicated team of ROR experts that ensure you to offer the most valuable code in form of a software or a website and will turn your ideas into reality. We're Full Stack Developers, which implies that we won't let you down when we have to roll out improvements to any piece of your project. We compose future-proof backends that can speak with any kind of the year Javascript Framework. </p><br>
+                           <p style="text-align: justify;"> Our website development professionals recognize the value of solid information architecture design and integrative branding that engages the customer from the first stop at your site. We are Just a firmly incorporated group with exceptionally learned developers can convey in high caliber at the speed you require. We are flexible in timings. We believe in the long-term relationship between your business and our duty. We specialize in custom PHP web application development, Wordpress, Android,Ruby on Rails, Seo Optimization and Node JS.We are flexible in timings. We believe in long term relationship for your business and our duty. </p><br>
 
                        </div>
                     </div>
                 </div> <!--/.row-->
+                <!--  -->
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="single-service wow fadeInUp" data-wow-delay="0.2s">
@@ -204,7 +205,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4 wow fadeInRight" data-wow-delay="0.2s">
                         <div class="cta-btn">
-                           <a class="bordered-btn" href="<%=home_contact_path%>">Contact us now</a>
+                           <a class="bordered-btn" href="<%=contact_path%>">Contact us now</a>
                         </div>
                     </div>
                 </div> <!--/.row-->
@@ -296,11 +297,12 @@
                             <img src="/assets/blog/blog1.jpg" class="img-responsive" alt="">
                             <div class="post-content">
                             <%end%>
-                                <h3><a href="<%=blog_path(blog)%>"> <%=blog.title%></a></h3>
+                            <%url_suffix = blog.slug || blog.id%>
+                                <h3><a href="blogs/<%= url_suffix %>"> <%=blog.title%></a></h3>
                                 <p class="blog-post-date"><%= blog.created_at.strftime("%d-%m-%y %H:%M:%S")  %></p>
                                 <p><%= truncate(blog.text.html_safe,length:200, :escape => false)%></p>
-                                <a class="read-more-btn" href="<%=blog_path(blog)%>">Read More</a>
-
+                               <!--  <a class="read-more-btn" href="<%=blog_path(blog)%>">Read More</a> -->
+                            <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
                             </div>
                         </div>
                     </div>

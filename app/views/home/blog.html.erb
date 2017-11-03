@@ -26,7 +26,8 @@
                             <% @blogs.each do |blog| %>
                             
                             
-                           <a href="<%=home_blog_path%>"><h2><%= blog.title %></h2></a>
+                           <%url_suffix = blog.slug || blog.id%>
+                           <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
                            <div class="entry-meta">
                                <span class="posted-on"> <%= blog.updated_at.strftime("%d-%m-%y %H:%M:%S")  %>: <a href="#"> </a></span>
                                <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
@@ -38,9 +39,7 @@
 
                                <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>
                                 
-
-                                                          
-                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Read More</a>
+                             <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
                              
                              
                            </div>

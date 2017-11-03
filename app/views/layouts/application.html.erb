@@ -101,11 +101,11 @@
                                     <li><a class="smoth-scroll" href="#service">service</a></li>
                                     <li><a class="smoth-scroll" href="#work">work</a>
                                     </li>
-                                    <li><a class="smoth-scroll" href="<%=home_blog_path%>">blog</a>
-                                    <li><a class="smoth-scroll" href="<%=home_about_us_path%>">about_us</a></li>    
+                                    <li><a class="smoth-scroll" href="<%=blog_path%>">blog</a>
+                                    <li><a class="smoth-scroll" href="<%=about_us_path%>">about_us</a></li>    
 
                                     </li>
-                                    <li><a class="smoth-scroll" href="<%=home_contact_path%>">contact</a></li>
+                                    <li><a class="smoth-scroll" href="<%=contact_path%>">contact</a></li>
                                     <%if current_admin.present?%>
                                      <li><a class="smoth-scroll" href="<%=edit_admin_registration_path%>">EDIT PROFILE</a></li>
                                      <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
@@ -201,8 +201,8 @@
                     </div>
                      <!--/.row-->
             </div> <!--/.container-->
-                <p>©Code Garage Tech 2017 All right reserved.</p>
-                <p>Ruby on Rails Company in Chandigarh | SEO Services in Chandigarh | Node.Js Company in Chandigarh | Android Development Company in Chandigarh</p>
+                <p style="color: #848484;">©Code Garage Tech 2017 All right reserved.</p>
+                <p style="color: #848484;">Ruby on Rails Company in Chandigarh | SEO Services in Chandigarh | Node.Js Company in Chandigarh | Android Development Company in Chandigarh</p>
             </footer>
         
         <!-- bootstrap js -->

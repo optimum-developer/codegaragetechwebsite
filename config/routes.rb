@@ -8,11 +8,11 @@ Rails.application.routes.draw do
   root 'home#index'
 
 
-  get 'home/about_us'=>'home#about_us'
-  get 'home/contact'=>'home#contact'
+  get 'about_us'=>'home#about_us'
+  get 'contact'=>'home#contact'
   get 'home/our_work'=>'home#our_work'
   get 'home/blog_page'=>'home#blog_page'
-  get 'home/blog'=>'home#blog'
+  get 'blog'=>'home#blog'
 
 
   resources :blogs
