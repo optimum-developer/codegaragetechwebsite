@@ -7,6 +7,7 @@ before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
  
   def show
     @blog = Blog.friendly.find(params[:id])
+    @blogs=Blog.all.last(3)
   end
  
   def new

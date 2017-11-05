@@ -3,11 +3,11 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Single blog</h1>
+                        <h1>BLOGS</h1>
                         <div class="breadcroumb">
-                            <a href="index.html">Home</a>
+                            <a href="index.html"></a>
                             
-                            <span class="current">Single Blog</span>
+                            <span class="current"></span>
                         </div>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
                            <%url_suffix = blog.slug || blog.id%>
                            <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
                            <div class="entry-meta">
-                               <span class="posted-on"> <%= blog.updated_at.strftime("%d-%m-%y %H:%M:%S")  %>: <a href="#"> </a></span>
+                               <span class="posted-on"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
                                <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
                            </div>
                            <div class="entry-content">
@@ -152,7 +152,7 @@
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
                             <% @blogs.each do |blog| %>
-                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.created_at.strftime("%d-%m-%y %H:%M:%S")  %></span></a></li>
+                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
                             <% end  %>
                             
                             

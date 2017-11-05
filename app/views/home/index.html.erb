@@ -231,7 +231,7 @@
                             <div class="single-testimonial">
                                 <div class="testimonial-author">
                                     <div class="testimonial-image">
-                                      <img src="/assets/testimonial/1.jpg" alt="">
+                                      <img src="/assets/image.png" alt="">
                                     </div>
                                 </div>
                                 <div class="testimonial-content">
@@ -244,7 +244,7 @@
                             <div class="single-testimonial">
                                 <div class="testimonial-author">
                                     <div class="testimonial-image">
-                                        <img src="/assets/testimonial/2.jpg" alt="">
+                                        <img src="/assets/image.png" alt="">
                                     </div>
                                 </div>
                                 <div class="testimonial-content">
@@ -257,7 +257,7 @@
                             <div class="single-testimonial">
                                 <div class="testimonial-author">
                                     <div class="testimonial-image">
-                                        <img src="/assets/testimonial/3.jpg" alt="">
+                                        <img src="/assets/image.png" alt="">
                                     </div>
                                 </div>
                                 <div class="testimonial-content">
@@ -299,7 +299,7 @@
                             <%end%>
                             <%url_suffix = blog.slug || blog.id%>
                                 <h3><a href="blogs/<%= url_suffix %>"> <%=blog.title%></a></h3>
-                                <p class="blog-post-date"><%= blog.created_at.strftime("%d-%m-%y %H:%M:%S")  %></p>
+                                <p class="blog-post-date"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></p>
                                 <p><%= truncate(blog.text.html_safe,length:200, :escape => false)%></p>
                                <!--  <a class="read-more-btn" href="<%=blog_path(blog)%>">Read More</a> -->
                             <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
