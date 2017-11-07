@@ -6,6 +6,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="uynsE7lbe2NpTX5-4p4FPJxxNDbeiG-KwxAtK1o6RTw" />
         
         <%= csrf_meta_tags %>
 
@@ -92,6 +93,7 @@
                         </div>
                     </div>
 
+
                     <div class="col-md-9 col-sm-9 col-xs-12">
                         <div class="navbar-collapse collapse">
                            <nav class="main-menu">
@@ -118,9 +120,12 @@
                 </div> <!--/.row-->
             </div> <!--/.container-->
         </header>
+        <p style="color: red;">
+            <%= flash[:notice]="sdnfjsfjsbf" %></p>
 
         
     <%= yield %>
+
 
          <!--====== FOOTER AREA ======-->
         <footer class="main-footer">
@@ -174,9 +179,10 @@
                             </div>
                             <ul class="social-links" style="margin-right:55px">
                                 <li ><i class="fa fa-facebook" aria-hidden="true" onclick="location='https://www.facebook.com/CodeGarageTech/'"></i></a></li>
-                                <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                                <li><i class="fa fa-twitter" aria-hidden="true" onclick="location='https://twitter.com/codegaragetech'"></i></li>
                                 <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
                                 <li><i class="fa fa-linkedin" aria-hidden="true" onclick="location='https://in.linkedin.com/company/code-garage-tech/'"></i></li>
+
                             </ul>
                         </div>
                     </div>
