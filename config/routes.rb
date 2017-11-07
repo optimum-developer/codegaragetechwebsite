@@ -1,7 +1,6 @@
 
 Rails.application.routes.draw do
-   get 'admins/sign_up'=>'home#about_us'
-  
+   get '/admins/sign_up'=>redirect('/about_us')
   devise_for :admins
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
