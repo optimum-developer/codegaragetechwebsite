@@ -14,22 +14,17 @@ before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
     @blog = Blog.new
   end
  
-  def edit
-    @blog = Blog.find(params[:id])
-  end
- 
   def create
-
-    
     @blog = Blog.new(blog_params)
-     
-
     @blog.save
     redirect_to blogs_path
   end
- 
+
+  def edit
+    @blog = Blog.friendly.find(params[:id])
+  end 
   def update
-    @blog = Blog.find(params[:id])
+    @blog = Blog.friendly.find(params[:id])
  
     if @blog.update(blog_params)
       redirect_to @blog
@@ -39,7 +34,7 @@ before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
   end
  
     def destroy
-      @blog = Blog.find(params[:id])
+      @blog = Blog.friendly.find(params[:id])
       @blog.destroy
    
       redirect_to blogs_path

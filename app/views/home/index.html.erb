@@ -289,7 +289,7 @@
                 </div> <!--/.row-->
                 
                 <div class="row">
-                  <% @blogs.each do |blog|%> 
+                  <% @blogs.each do |blog|%>
                     <div class="col-sm-4">
 
                         <div style="padding: 0px 0px 22px;">
@@ -298,9 +298,11 @@
                             <div class="post-content">
                             <%end%>
                             <%url_suffix = blog.slug || blog.id%>
+                              
                                 <h3><a href="blogs/<%= url_suffix %>"> <%=blog.title%></a></h3>
                                 <p class="blog-post-date"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></p>
-                                <p><%= truncate(blog.text.html_safe,length:200, :escape => false)%></p>
+                              <!--<div><%#= blog.text.html_safe.truncate_words(200)%>
+                              </div>--!>
                                <!--  <a class="read-more-btn" href="<%=blog_path(blog)%>">Read More</a> -->
                             <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
                             </div>

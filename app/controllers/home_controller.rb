@@ -18,7 +18,7 @@ class HomeController < ApplicationController
 		@new_contact=Contact.new
 	end
 
-	def blog
+	def all_blogs
 		@blogs = Blog.all
 	end
 

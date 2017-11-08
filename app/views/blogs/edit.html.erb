@@ -8,7 +8,7 @@
                         <h2>Edit Blog</h2>
                         <br>
                         <div class="contact-form-a  rea">
-                            <%= form_for @blog do |f| %>
+                            <%= form_for @blog, :url => {:action => "update"} do |f| %>
                             
                                 <div class="messages"></div>
                                 <div class="controls">
