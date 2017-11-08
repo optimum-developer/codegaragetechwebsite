@@ -1,0 +1,199 @@
+<!--===== BREADCROUMB AREA =====-->
+        <div class="lite-breadcroumb-area" data-stellar-background-ratio="0.6" style="background-image: url(/assets/blog-bg.jpg);">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>BLOGS</h1>
+                        <div class="breadcroumb">
+                            <a href="index.html"></a>
+                            
+                            <span class="current"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!--===== SINGLE POST AREA =====-->
+        <div class="blog-area section-padding">
+           <div class="container">
+               <div class="row">
+                   <div class="col-md-8">
+                       <div class="single-post-details">
+                           <div class="lite-post-featured-content">
+                                <img src="/assets/blog/blog1.jpg" class="img-responsive" alt="">
+                            </div>
+                            <% @blogs.each do |blog| %>
+                            
+                            
+                           <%url_suffix = blog.slug || blog.id%>
+                           <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
+                           <div class="entry-meta">
+                               <span class="posted-on"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
+                               <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
+                           </div>
+                           <div class="entry-content">
+                           
+                           
+                            
+
+                               <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>
+                                
+                             <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
+                             
+                             
+                           </div>
+                           <%end%>
+                       </div>
+                       
+
+                       <% if false %>
+                       <div class="comments-area"> <!-- comments area -->
+                           <h3 class="comment-title">2 Comments on this post</h3>
+                           <ul class="comment-list">
+                               <li class="comment-item">
+                                   <div class="row">
+                                       <div class="col-md-2">
+                                           <img src="/assets/comment-author.jpg" alt="">
+                                       </div>
+                                       <div class="col-md-10">
+                                           <div class="comment-metadata">
+                                               <h5>David Ramon</h5>
+                                               <p>27 January 2017</p>
+                                           </div>
+                                           <div class="comment-content">
+                                               <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, velfacilisis at vero eros et accumsan et iusto odio dignissim.</p>
+                                           </div>
+                                           <a href="#" class="comment-reply-link">REPLY</a>
+                                       </div>
+                                   </div>
+                                   <div class="row replay-area">
+                                       <div class="col-md-2">
+                                           <img src="/assets/comment-author.jpg" alt="">
+                                       </div>
+                                       <div class="col-md-10">
+                                           <div class="comment-metadata">
+                                               <h5>David Ramon</h5>
+                                               <p>27 January 2017</p>
+                                           </div>
+                                           <div class="comment-content">
+                                               <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, velfacilisis at vero eros et accumsan et iusto odio dignissim.</p>
+                                           </div>
+                                           <a href="#" class="comment-reply-link">REPLY</a>
+                                       </div>
+                                   </div>
+                               </li>
+                               <li class="comment-item">
+                                   <div class="row">
+                                       <div class="col-md-2">
+                                           <img src="/assets/comment-author.jpg" alt="">
+                                       </div>
+                                       <div class="col-md-10">
+                                           <div class="comment-metadata">
+                                               <h5>David Ramon</h5>
+                                               <p>22 August 2016</p>
+                                           </div>
+                                           <div class="comment-content">
+                                               <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, velfacilisis at vero eros et accumsan et iusto odio dignissim.</p>
+                                           </div>
+                                           <a href="#" class="comment-reply-link">REPLY</a>
+                                       </div>
+                                   </div>
+                               </li>
+                           </ul>
+                           <div class="comment-form-wrap"> <!-- comments form area -->
+                               <h3 class="comment-form-title">Leave a comment</h3>
+                               <form method="post" action="#">
+                                    <div class="messages"></div>
+                                    <div class="controls">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Name*" required="required" data-error="Name is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Email*" required="required" data-error="Valid email is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea id="form_message" name="message" class="form-control" placeholder="Message*" rows="7" required="required" data-error="Please,leave us a message."></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="filled-btn btn-comment">Submit Comment</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                           </div>
+                       </div>
+                       <% end %>
+                   </div>
+
+                      <div class="col-md-4">
+                       <div class="widget search"> <!-- widget single -->
+                        <!--
+                        <form class="search-form" action="#">
+                            <input type="search" placeholder="Type to search here...">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                      -->
+                    </div>
+                    
+                    <div class="widget recent-post"> <!-- widget single -->
+                        <h3 class="widget-title">Recent Posts</h3>
+                        <ul>
+                            <% @blogs.each do |blog| %>
+                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
+                            <% end  %>
+                            
+                            
+                        </ul>
+                    </div>
+                    <!--
+                    <div class="widget category"> 
+                        <h3 class="widget-title">Categories</h3>
+                        <ul>
+                            <li><a href="#">Web Design <span>(5)</span></a></li>
+                            <li><a href="#">Development <span>(17)</span></a></li>
+                            <li><a href="#">Graphics Design  <span>(25)</span></a></li>
+                            <li><a href="#">WordPress <span>(24)</span></a></li>
+                            <li><a href="#">Technology <span>(8)</span></a></li>
+                        </ul>
+                    </div>
+                  -->
+                    <!--
+                    <div class="widget tags"> 
+                       <h3 class="widget-title">tags</h3>
+                        <ul>
+                            <li><a href="#">Design</a></li>
+                            <li><a href="#">Tecnology</a></li>
+                            <li><a href="#">Tends</a></li>
+                            <li><a href="#">html</a></li>
+                            <li><a href="#">wordpress</a></li>
+                            <li><a href="#">java</a></li>
+                            <li><a href="#">c++</a></li>
+                            <li><a href="#">jquery</a></li>
+                            <li><a href="#">business</a></li>
+                            <li><a href="#">jumla</a></li>
+                            <li><a href="#">envato</a></li>
+                        </ul>
+                    </div>
+                  -->
+                   </div>
+               </div>
+           </div>
+        </div>
+     
+     
+
+
+
