@@ -2,7 +2,7 @@ class BlogsController <  ApplicationController
 
 before_action :authenticate_admin!, only: [ :create, :new, :edit]
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.paginate(:page => params[:page], :per_page => 5)
   end
  
   def show

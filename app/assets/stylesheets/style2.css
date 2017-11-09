@@ -2125,12 +2125,12 @@ ul,li{
 	-o-transition:all 500ms ease;
 	-moz-transition:all 500ms ease;
 }
-.styled-pagination li a.prev,
-.styled-pagination li a.next{
+.styled-pagination a.previous_page,
+.styled-pagination a.next_page{
 	font-size:18px;	
 }
-.styled-pagination li a:hover,
-.styled-pagination li a.active{
+.styled-pagination a:hover,
+.styled-pagination a.active{
 	color:#ffffff;
 	background: #5ca2da;
 	border-color: #5ca2da;
