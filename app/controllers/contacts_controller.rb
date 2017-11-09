@@ -5,14 +5,24 @@ class ContactsController < ApplicationController
      	if @new_contact_us.save
      		cont_email=@new_contact_us.email
      		cont_name=@new_contact_us.name
-     		MailUserMailer.send_mail_to_user(cont_email).deliver
+     		# MailUserMailer.send_mail_to_user(cont_email).deliver
             MailUserMailer.send_mail_to_admin.deliver
 
+          respond_to do |format|
+                format.json { render :json =>{status: 200,status_notify:"success"}  }
+                format.html { }
 
+            end
+        else
+            respond_to do |format|
+                format.json { render :json =>{status: 200,status_notify:"unsuccess"}  }
+                format.html { }
+
+            end
      		
         end
-        flash[:notice] = 
-        redirect_to :back
+        
+        # redirect_to :back
     end
 
     private

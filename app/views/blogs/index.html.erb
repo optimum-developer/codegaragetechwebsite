@@ -34,7 +34,7 @@
                            <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
                            <div class="entry-meta">
                                <span class="posted-on"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
-                               <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
+                               <span class="posted-by">Posted by: <span style="color:#3b99d5">Ajit Pandey</span></span>
                            </div>
                            <div class="entry-content">
                               <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>

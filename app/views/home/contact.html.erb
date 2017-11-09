@@ -1,10 +1,4 @@
 
-<script>
-<%if flash[:notice].present?%>
-        $.notify("Thanks for your query. We will you contact you soon.", "success");
-      <%end%>
-</script>
-
         <!--====== CONTACT INFO AREA ======-->
         <div id="contact" class="contact-info-area section-padding">
             <div class="container">
@@ -105,7 +99,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="submit" class="filled-btn" value="Send message">
+                                            <input type="button" class="filled-btn" value="Send message" onclick="send_contact_response() ;clear_feilds()">
                                         </div>
                                     </div> <!--/.row-->
                                 </div>
@@ -115,3 +109,50 @@
                 </div> <!--/.row-->
             </div><!--/.container-->
         </div>
+
+
+        <script type="text/javascript">
+    function send_contact_response() {
+        // alert("wewhgyfg")
+        $.ajax({
+                type: "POST",
+                dataType: 'json',
+                headers: {
+                    'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
+                },
+                url: '<%=contacts_path%>',
+                data: $("#new_contact").serialize(),
+
+                success: function(data) {
+                    // $("#new_contact").trigger('reset');
+                    if (data["status_notify"]=="success"){
+                        $.notify("Thanks for contacting us. We will contact you shortly.", "success");                                    
+                        
+
+                    }
+
+                    else{
+                         $.notify("Please Try Again! something went wrong", "warn");                                    
+
+                    }
+
+                },
+                error: function(err){
+                        $.notify("Something Went Wrong! Please Try Again","error");
+                                                                
+                                                         
+                    
+                }
+
+                })
+
+    }
+
+    function clear_feilds(){
+      $("#new_contact").trigger('reset');
+
+
+    }
+    
+
+</script>
