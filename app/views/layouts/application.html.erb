@@ -117,6 +117,7 @@
                                     </li>
                                     <li><a class="smoth-scroll" href="<%=contact_path%>">contact</a></li>
                                     <%if current_admin.present?%>
+                                     <li><a class="smoth-scroll" href="blogs/new">New Blog</a></li>
                                      <li><a class="smoth-scroll" href="<%=edit_admin_registration_path%>">EDIT PROFILE</a></li>
                                      <li><%= link_to('Logout', destroy_admin_session_path, method: :delete) %></li>
 
