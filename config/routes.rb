@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'contact'=>'home#contact'
   get 'home/our_work'=>'home#our_work'
   get 'home/blog_page'=>'home#blog_page'
-  get 'all_blogs'=>'home#all_blogs'
+  # get 'all_blogs'=>'home#all_blogs'
 
 
   resources :blogs

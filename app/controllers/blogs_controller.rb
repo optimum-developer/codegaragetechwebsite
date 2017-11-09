@@ -1,6 +1,6 @@
 class BlogsController <  ApplicationController
 
-before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
+before_action :authenticate_admin!, only: [ :create, :new, :edit]
   def index
     @blogs = Blog.all
   end
@@ -42,6 +42,6 @@ before_action :authenticate_admin!, only: [:index, :create, :new, :edit]
      
   private
     def blog_params
-      params.require(:blog).permit(:title, :text)
+      params.require(:blog).permit(:title, :text,:image)
     end
 end

@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Single blog</h1>
+                        <h1>BLOG</h1>
                         <div class="breadcroumb">
                             <a href="index.html"></a>
                             
@@ -23,7 +23,13 @@
                    <div class="col-md-8">
                        <div class="single-post-details">
                            <div class="lite-post-featured-content">
+                              <%if @blog.image.present?%>
+
+                                <img src="<%=@blog.image.url%>" class="img-responsive"alt="">
+                              <%else%>
                                 <img src="/assets/blog/blog1.jpg" class="img-responsive" alt="">
+                              <%end%>
+                                
                             </div>
                             
                             
@@ -153,7 +159,7 @@
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
                             <% @blogs.each do |blog| %>
-                            <li><a href="<%=all_blogs_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
+                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
                             <% end  %>
                             
                             

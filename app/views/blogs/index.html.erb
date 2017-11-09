@@ -12,25 +12,62 @@
             </div>
         </div>
         <!--===== SINGLE POST AREA =====-->
-        <div class="blog-area">
+
+
+
+      <div class="blog-area section-padding">
            <div class="container">
                <div class="row">
                    <div class="col-md-8">
                        <div class="single-post-details">
-                            <% @blogs.each do |blog| %>
-                           <a href="<%=all_blogs_path%>"><h2><%= blog.title %></h2></a>
-                           <div class="entry-content">
-                               <p style="text-align: justify;"><%=blog.text.html_safe%></p>
-                             <a class="read-more-btn" href="<%= blog_path(blog) %>">Show</a>
-                             <a class="read-more-btn" href="<%= edit_blog_path(blog) %>">Edit</a>
-                             <%= link_to('Delete',blog_path(blog), method: :delete,class: "read-more-btn") %>
+                          <% @blogs.each do |blog| %>
+                            <div class="lite-post-featured-content">
+                              <%if blog.image.present?%>
+
+                                <img src="<%=blog.image.url%>" class="img-responsive"alt="">
+                              <%else%>
+                                <img src="/assets/blog/blog1.jpg" class="img-responsive"  alt="">
+                              <%end%>
+
+                            </div>
+                           <%url_suffix = blog.slug || blog.id%>
+                           <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
+                           <div class="entry-meta">
+                               <span class="posted-on"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
+                               <span class="posted-by">Posted by: <a href="#">Ajit Pandey</a></span>
                            </div>
+                           <div class="entry-content">
+                              <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>
+                              <%if current_admin.present?%>
+                                 <a class="read-more-btn" href="<%= blog_path(blog) %>">Show</a>
+                                 <a class="read-more-btn" href="<%= edit_blog_path(blog) %>">Edit</a>
+                                 <%= link_to('Delete',blog_path(blog), method: :delete,class: "read-more-btn") %>
+                              <%else%>
+                                <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
+                              
+                              <%end%> 
+                           </div> 
+                             <hr>
+                             
                            <%end%>
                        </div>
                    </div>
-               </div>
-           </div>
-        </div>
+                   <div class="col-md-4">
+                    <div class="widget recent-post"> <!-- widget single -->
+                      <h3 class="widget-title">Recent Posts</h3>
+                      <ul>
+                        <%@blogs.each do |blog| %>
+                           <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>                       
+                        <%end%>
+                      </ul>
+                    </div>
+                   </div>
+                  
+                </div>
+            </div>
+      </div>
+                       
+
      
      
 

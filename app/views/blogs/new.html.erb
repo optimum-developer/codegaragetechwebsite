@@ -13,14 +13,18 @@
                         <br>
 
                         <div class="contact-form-a  rea">
-                            <%= form_for @blog do |f| %>
+                            <%= form_for @blog,html: { multipart: true } do |f| %>
                             
                                 <div class="messages"></div>
                                 <div class="controls">
-                                    <div class="row" ">
+                                    <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
 
+                                                <div class="form-group">
+                                                    <%= f.label :image %>
+                                                    <%= f.file_field :image, class: 'form-control' %>
+                                                </div>
                                                 <input  id="form_name" type="text" name="blog[title]" class="form-control" placeholder="Title" required="required" data-error="Name is required." >
                                                 <div class="help-block with-errors"></div>
                                             </div>
