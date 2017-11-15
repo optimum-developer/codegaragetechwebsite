@@ -1,6 +1,12 @@
 
 Rails.application.routes.draw do
-   get '/admins/sign_up'=>redirect('/about_us')
+  get 'errors/not_found'
+
+
+  get 'errors/internal_server_error'
+  match "/404", :to => "errors#not_found", :via => :all
+  # match "/500", :to => "errors#internal_server_error", :via => :all
+  get '/admins/sign_up'=>redirect('/about_us')
   devise_for :admins
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -18,6 +24,8 @@ Rails.application.routes.draw do
   resources :blogs
   resources :contacts
   resources :subscribes
+
+  get '*a', :to => 'errors#not_found'
 
 
 
