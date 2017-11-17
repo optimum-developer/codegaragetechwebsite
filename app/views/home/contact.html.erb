@@ -7,11 +7,11 @@
                        <div class="section-title text-center">
                            <h2>Contact us</h2>
                            <span class="border-center"></span>
-                           <p>We're Full Stack Developers, which implies we won't let you down when we have to roll out improvements to any piece of your project. We compose ffuture-proof backends that can speak with any "Kind of the year" Javascript Framework.</p>
+                           <p>We're Full Stack Developers, which implies we won't let you down when we have to roll out improvements to any piece of your project. We compose future-proof backends that can speak with any  "Kind of the year"  Javascript Framework.</p>
                        </div>
                    </div>
                </div> <!--/.row-->
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="contact-info-inner">
@@ -31,7 +31,7 @@
                                             <img src="/assets/contact-info/telephone.png" alt="">
                                         </div>
                                         <h4>Phone Number</h4>
-                                        <p> 0172-5092226<br>7508164472</p>
+                                        <p> 0172-5092226<br>+917508164472</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-3">
@@ -46,7 +46,7 @@
                             <div class="col-sm-3">
                                 <div class="contact-info">
                                     <div class="contact-icon">
-                                        <img src="/assets/contact-info/discuss-issue.png" alt="">
+                                        <i class="fa fa-skype" style="font-size: 48px;color: #007ff7;"></i>
                                     </div>
                                     <h4>24/7 Online Support</h4>
                                     <p>farz.singh</p>
@@ -56,12 +56,26 @@
                         </div>
                     </div>
                 </div><!--/.row-->
-                 
+
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="contact-form-area">
+                            <% if flash[:notice]%>
+                                <% if flash[:notice]=="successfull" %>
+                                    <script>
+                                        $.notify("Thanks for contacting us. We will contact you shortly.", "success");
+                                    </script>
+                                <%else%>
+                                    <%flash[:notice].each do |f|%>
+                                        <script>
+                                            $.notify("<%=f%>")
+                                        </script>
+                                    <%end%>
+                                        
+                                <% end %>
+                            <%end%>
                             <%= form_for @new_contact do |f| %>
-                            
+
                                 <div class="messages"></div>
                                 <div class="controls">
                                     <div class="row">
@@ -99,7 +113,7 @@
 
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="button" class="filled-btn" value="Send message" onclick="send_contact_response() ;clear_feilds()">
+                                            <input type="submit" class="filled-btn" value="Send message" onclick="send_contact_response() ;clear_feilds()">
                                         </div>
                                     </div> <!--/.row-->
                                 </div>
@@ -109,50 +123,3 @@
                 </div> <!--/.row-->
             </div><!--/.container-->
         </div>
-
-
-        <script type="text/javascript">
-    function send_contact_response() {
-        // alert("wewhgyfg")
-        $.ajax({
-                type: "POST",
-                dataType: 'json',
-                headers: {
-                    'X-CSRF-Token': '<%= form_authenticity_token.to_s %>'
-                },
-                url: '<%=contacts_path%>',
-                data: $("#new_contact").serialize(),
-
-                success: function(data) {
-                    // $("#new_contact").trigger('reset');
-                    if (data["status_notify"]=="success"){
-                        $.notify("Thanks for contacting us. We will contact you shortly.", "success");                                    
-                        
-
-                    }
-
-                    else{
-                         $.notify("Please Try Again! something went wrong", "warn");                                    
-
-                    }
-
-                },
-                error: function(err){
-                        $.notify("Something Went Wrong! Please Try Again","error");
-                                                                
-                                                         
-                    
-                }
-
-                })
-
-    }
-
-    function clear_feilds(){
-      $("#new_contact").trigger('reset');
-
-
-    }
-    
-
-</script>

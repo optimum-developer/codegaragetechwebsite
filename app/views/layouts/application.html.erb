@@ -108,9 +108,13 @@
 
                                 <ul  class="nav navbar-nav navbar-right" > <!--== manin menu ==-->
                                     <li class="active"><a class="smoth-scroll" href="<%=root_path%>">Home</a></li>
-                                    <li><a class="smoth-scroll" href="#service">service</a></li>
-                                    <li><a class="smoth-scroll" href="#work">work</a>
+                                    <!--
+                                    <li><a class="smoth-scroll" href="/#service">service</a></li>
+                                -->
+                                    <!--
+                                    <li><a class="smoth-scroll" href="/#work">work</a>
                                     </li>
+                                -->
                                     <li><a class="smoth-scroll" href="<%=blogs_path%>">blog</a>
                                     <li><a class="smoth-scroll" href="<%=about_us_path%>">About us</a></li>
 
@@ -152,15 +156,15 @@
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="services-area">
                             <div class="sec-title">
-                                <h5>Reach to Us</h5>
+                                <h5>Reach Us</h5>
                             </div>
                             <ul class="services-link" style="color:gray">
-                                <li><i  class="fa fa-map-marker fa-1" style="font-size: 40px; margin-right: 8px;"></i>Cabin-5B, E-5   5, Phase-8, IndustrialArea,Mohali, Punjab</li>
-                                <li><i  class="fa fa-mobile " style="font-size: 34px; margin-right: 15px; font-size: 45px;"></i> 0172-5053786</li>
-                                <li><i  class="fa fa-envelope-o" style="font-size: 27px; margin-right: 10px;"></i> info@codegaragetech.com</li>
+                                <li><i  class="fa fa-map-marker fa-1" style="font-size: 40px; margin-right: 8px;"></i> Cabin-5B, E-5   5, Phase-8, IndustrialArea,Mohali, Punjab</li>
+                                <li><i  class="fa fa-mobile " style="font-size: 34px; margin-right: 15px; font-size: 45px;  white-space: nowrap;"></i> 0172-5053786</li>
+                                <li><i  class="fa fa-envelope-o" style="font-size: 27px; margin-right: 10px; margin-left: -4px"></i> info@codegaragetech.com</li>
 
 
-                                <li><i  class="fa fa-skype" style="font-size: 34px; margin-right: 8px;"></i> career@codegaragetech.com</li>
+                                <li><i  class="fa fa-skype" style="font-size: 34px; margin-right: 8px; margin-left:-4px"></i> career@codegaragetech.com</li>
                             </ul>
                         </div>
                     </div>
@@ -169,14 +173,14 @@
                             <div class="sec-title">
                                 <h5>What we do</h5>
                             </div>
-                            <ul class="services-link">
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Ruby on Rails</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Node.js</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Android</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Javascript</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>React</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Bootstrap</a></li>
-                                <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>PHP</a></li>
+                            <ul class="services-link" style="color:white">
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Ruby on Rails</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Node.js</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Android</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Javascript</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>React</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>Bootstrap</li>
+                                <li><i class="fa fa-angle-right" aria-hidden="true"></i>PHP</li>
                             </ul>
                         </div>
                     </div>
@@ -186,10 +190,23 @@
                                 <h5>Check us On Social Networks</h5>
                             </div>
                             <ul class="social-links" style="margin-right:55px">
-                                <li ><i class="fa fa-facebook" aria-hidden="true" onclick="location='https://www.facebook.com/CodeGarageTech/'"></i></a></li>
-                                <li><i class="fa fa-twitter" aria-hidden="true" onclick="location='https://twitter.com/codegaragetech'"></i></li>
-                                <li><i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
-                                <li><i class="fa fa-linkedin" aria-hidden="true" onclick="location='https://in.linkedin.com/company/code-garage-tech/'"></i></li>
+                                <li >
+                                    <a href="https://www.facebook.com/CodeGarageTech/" target="_blank">
+                                        <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/codegaragetech" target="_blank">
+                                        <i class="fa fa-twitter" aria-hidden="true" ></i></li>
+                                    </a>
+                                <li>
+                                    <a href="https://plus.google.com/u/0/102050942109607469627" target="_blank">
+                                        <i class="fa fa-google-plus-official" aria-hidden="true"></i></li>
+                                    </a>
+                                <li>
+                                    <a href="https://in.linkedin.com/company/code-garage-tech/" target="_blank">
+                                        <i class="fa fa-linkedin" aria-hidden="true" ></i></li>
+                                    </a>
 
                             </ul>
                         </div>
@@ -216,7 +233,7 @@
                      <!--/.row-->
             </div> <!--/.container-->
                 <p style="color: #848484;">©Code Garage Tech 2017 All right reserved.</p>
-                <p style="color: #848484;">Ruby on Rails Company in Chandigarh | SEO Services in Chandigarh | Node.Js Company in Chandigarh | Android Development Company in Chandigarh</p>
+                <p style="color: #848484; display:none;" >Ruby on Rails Company in Chandigarh | SEO Services in Chandigarh | Node.Js Company in Chandigarh | Android Development Company in Chandigarh</p>
             </footer>
 
         <!-- bootstrap js -->

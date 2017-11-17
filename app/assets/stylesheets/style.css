@@ -890,7 +890,7 @@ button:focus {
 .social-links li {
     display: inline-block;
 }
-.social-links a {
+/*.social-links a {
     border: 1px solid #ddd;
     border-radius: 50%;
     color: #fff;
@@ -906,7 +906,7 @@ button:focus {
     background-color: #3b99d5;
     border: 1px solid #3b99d5;
     color: #fff;
-}
+}*/
 .footer-text{
    
 }
