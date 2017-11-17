@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
 
-  get 'about_us'=>'home#about_us'
+  get 'about-us'=>'home#about_us'
   # get 'blogs/:id' =>'home#show'/
   get 'contact'=>'home#contact'
   get 'home/our_work'=>'home#our_work'
