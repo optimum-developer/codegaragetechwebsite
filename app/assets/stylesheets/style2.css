@@ -46,7 +46,7 @@
 **********************************************/
 
 
-/*** 
+/***
 
 ====================================================================
 	Google Fonts
@@ -58,7 +58,7 @@
 @import url('https://fonts.googleapis.com/css?family=Unna:400,700');
 
 
-/*** 
+/***
 
 ====================================================================
 	Reset
@@ -83,7 +83,7 @@
 	outline:none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Global style
@@ -135,7 +135,7 @@ p{
 	font-family: 'Open Sans', sans-serif;
 }
 .strike-through{
-	text-decoration:line-through;	
+	text-decoration:line-through;
 }
 .auto-container{
 	position:static;
@@ -151,33 +151,33 @@ p{
 	position:relative;
 	margin:0 auto;
 	width:100%;
-	min-width:300px;	
+	min-width:300px;
 }
 ul,li{
 	list-style:none;
 	padding:0px;
-	margin:0px;	
+	margin:0px;
 }
 .anim-3,.anim-3-all *{
 	transition:all 0.3s ease;
 	-moz-transition:all 0.3s ease;
 	-webkit-transition:all 0.3s ease;
 	-ms-transition:all 0.3s ease;
-	-o-transition:all 0.3s ease;	
+	-o-transition:all 0.3s ease;
 }
 .anim-5,.anim-5-all *{
 	transition:all 0.5s ease;
 	-moz-transition:all 0.5s ease;
 	-webkit-transition:all 0.5s ease;
 	-ms-transition:all 0.5s ease;
-	-o-transition:all 0.5s ease;	
+	-o-transition:all 0.5s ease;
 }
 .anim-7,.anim-7-all *{
 	transition:all 0.7s ease;
 	-moz-transition:all 0.7s ease;
 	-webkit-transition:all 0.7s ease;
 	-ms-transition:all 0.7s ease;
-	-o-transition:all 0.7s ease;	
+	-o-transition:all 0.7s ease;
 }
 .section-title h6{
 	font-size: 18px;
@@ -251,7 +251,7 @@ ul,li{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Preloader style
@@ -259,20 +259,20 @@ ul,li{
 
 ***/
 
-.preloader{ 
-	position:fixed; 
-	left:0px; 
-	top:0px; 
-	height:100%; 
-	width: 100%; 
-	z-index:99999; 
-	background-color:#ffffff; 
-	background-position:center center; 
-	background-repeat:no-repeat; 
+.preloader{
+	position:fixed;
+	left:0px;
+	top:0px;
+	height:100%;
+	width: 100%;
+	z-index:99999;
+	background-color:#ffffff;
+	background-position:center center;
+	background-repeat:no-repeat;
 	background-image:url(../images/icons/preloader.gif);
 }
 
-/*** 
+/***
 
 ====================================================================
 	Scroll To Top style
@@ -310,7 +310,7 @@ ul,li{
 
 /*** ===================================Home Page One======================================***/
 
-/*** 
+/***
 
 ====================================================================
 	Header Top
@@ -386,7 +386,7 @@ ul,li{
 
 
 
-/*** 
+/***
 
 ====================================================================
 	Main Header
@@ -445,7 +445,7 @@ ul,li{
 	float: right;
 }
 .main-menu .navbar-collapse{
-	padding:0px;	
+	padding:0px;
 }
 .main-menu .navigation{
 	position:relative;
@@ -521,7 +521,7 @@ ul,li{
 	visibility:visible;
 	opacity:1;
 	top:160%;
-	transition:all 500ms ease;	
+	transition:all 500ms ease;
 }
 .main-menu .navbar-collapse > ul li.dropdown .dropdown-btn{
 	display:block;
@@ -532,7 +532,7 @@ ul,li{
 	font-size: 20px;
 }
 
-/*** 
+/***
 =============================================
     Rev Slider Wrapper
 =============================================
@@ -561,7 +561,7 @@ ul,li{
     pointer-events: none;
 }
 .tp-bannertimer {
-    display: none;  
+    display: none;
 }
 .rev_slider_wrapper .tparrows {
     background: transparent;
@@ -578,7 +578,7 @@ ul,li{
     text-align: center;
 }
 
-/*** 
+/***
 
 =============================================
     About Section
@@ -596,7 +596,7 @@ ul,li{
 	padding-top: 38px;
 }
 
-/*** 
+/***
 
 =============================================
     Wellcome Section
@@ -636,7 +636,7 @@ ul,li{
 	color: #848484;
 }
 
-/*** 
+/***
 
 ====================================================================
   Fact Counter Section
@@ -700,7 +700,7 @@ ul,li{
 }
 
 
-/*** 
+/***
 
 =============================================
     Services Section
@@ -739,7 +739,7 @@ ul,li{
 	color: #848484;
 }
 
-/*** 
+/***
 
 =============================================
     Project Section
@@ -807,7 +807,7 @@ ul,li{
 	-o-transition:all 500ms ease;
 }
 
-/*** 
+/***
 
 =============================================
     Testimonials Section
@@ -886,7 +886,7 @@ ul,li{
 	line-height: 26px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Vedio Section
@@ -933,7 +933,7 @@ ul,li{
 	color: #ffffff;
 }
 
-/*** 
+/***
 
 =============================================
     Team Section
@@ -989,7 +989,7 @@ ul,li{
 }
 
 
-/*** 
+/***
 
 ====================================================================
 	Sponsors Logos Style
@@ -1005,7 +1005,7 @@ ul,li{
 	display: none;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Blog Section
@@ -1067,12 +1067,12 @@ ul,li{
 	color: #848484;
 	font-size: 14px;
 	line-height: 26px;
-	font-weight: 400; 
+	font-weight: 400;
 }
 
 
 
-/*** 
+/***
 
 =============================================
     Google Map Area
@@ -1088,7 +1088,7 @@ ul,li{
   width: 100%;
 }
 
-/*** 
+/***
 
 =============================================
     Main Footer
@@ -1206,7 +1206,7 @@ ul,li{
 /*** ===================================Home Page Two======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Header Style Two
@@ -1245,7 +1245,7 @@ ul,li{
 	font-family: 'Open Sans', sans-serif;
 }
 
-/*** 
+/***
 
 =============================================
     Slider Style Two
@@ -1257,7 +1257,7 @@ ul,li{
 	border-radius: 50%;
 }
 
-/*** 
+/***
 
 =============================================
     About Us Section
@@ -1303,7 +1303,7 @@ ul,li{
 	padding-bottom: 30px;
 }
 
-/*** 
+/***
 
 =============================================
     Fun Facts Section
@@ -1340,7 +1340,7 @@ ul,li{
 	display: none;
 }
 
-/*** 
+/***
 
 =============================================
     Working Section
@@ -1376,7 +1376,7 @@ ul,li{
 }
 
 
-/*** 
+/***
 
 =============================================
     Testimonials Single
@@ -1433,7 +1433,7 @@ ul,li{
 	padding-bottom: 18px;
 }
 
-/*** 
+/***
 
 =============================================
     Project Section Style Two
@@ -1465,7 +1465,7 @@ ul,li{
 	color: #848484;
 }
 
-/*** 
+/***
 
 =============================================
     Cta Section
@@ -1503,7 +1503,7 @@ ul,li{
 	padding-bottom: 25px;
 }
 
-/*** 
+/***
 
 =============================================
     News Section
@@ -1553,7 +1553,7 @@ ul,li{
 	border-color: #5ca2da;
 }
 
-/*** 
+/***
 
 =============================================
     Subscribe Section
@@ -1586,7 +1586,7 @@ ul,li{
 	width: 100%;
 }
 
-/*** 
+/***
 
 =============================================
     Footer Style Two
@@ -1623,7 +1623,7 @@ ul,li{
 /*** ===================================About Page======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Page Title
@@ -1677,7 +1677,7 @@ ul,li{
 /*** ===================================Services Page======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Services Section Style Two
@@ -1691,7 +1691,7 @@ ul,li{
 
 /*** ===================================Services Details======================================***/
 
-/*** 
+/***
 
 =============================================
     Services Details
@@ -1757,7 +1757,7 @@ ul,li{
 /*** ===================================Project Details======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Project Details
@@ -1852,7 +1852,7 @@ ul,li{
 /*** ===================================Team Details======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Team Details
@@ -1931,7 +1931,7 @@ ul,li{
 /*** ===================================Faq Page======================================***/
 
 
-/*** 
+/***
 
 =============================================
     Faq Page
@@ -2007,7 +2007,7 @@ ul,li{
 /*** =================================Testimonials Page====================================***/
 
 
-/*** 
+/***
 
 =============================================
     Testimonials Style Two
@@ -2026,7 +2026,7 @@ ul,li{
 /*** =================================Error Page====================================***/
 
 
-/*** 
+/***
 
 =============================================
     Error Section
@@ -2077,7 +2077,7 @@ ul,li{
 
 /*** =================================Blog Page====================================***/
 
-/*** 
+/***
 
 =============================================
     Blog Section Style Two
@@ -2086,10 +2086,10 @@ ul,li{
 ***/
 
 .blog-section.style-two{
-	padding: 120px 0px 100px;
+	padding: 0px 0px 100px;
 }
 
-/*** 
+/***
 
 ====================================================================
 	Styled Pagination
@@ -2127,7 +2127,7 @@ ul,li{
 }
 .styled-pagination a.previous_page,
 .styled-pagination a.next_page{
-	font-size:18px;	
+	font-size:18px;
 }
 .styled-pagination a:hover,
 .styled-pagination a.active{
@@ -2140,7 +2140,7 @@ ul,li{
 
 /*** =================================Single Blog Page====================================***/
 
-/*** 
+/***
 
 ====================================================================
 	Single Blog
@@ -2402,7 +2402,7 @@ ul,li{
 }
 .right-side .gallery-width .image img{
 	position:relative;
-	width:100%;	
+	width:100%;
 }
 .right-side .lightbox-image{
 	position: absolute;
@@ -2444,13 +2444,13 @@ ul,li{
     -ms-transform: scale(1, 1);
     -o-transform: scale(1, 1);
     -moz-transform: scale(1, 1);
-    transform: scale(1, 1);	
+    transform: scale(1, 1);
 }
 
 /*** =================================Contact Page====================================***/
 
 
-/*** 
+/***
 
 =============================================
     Contact Section
@@ -2480,7 +2480,7 @@ ul,li{
 }
 
 
-/*** 
+/***
 
 =============================================
     Map Area
@@ -2531,10 +2531,10 @@ ul,li{
 	margin-top: 10px;
 }
 
-/*** 
+/***
 
 ====================================================================
-	Google Map Section 
+	Google Map Section
 ====================================================================
 
 ***/
