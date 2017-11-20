@@ -269,7 +269,7 @@ ul,li{
 	background-color:#ffffff;
 	background-position:center center;
 	background-repeat:no-repeat;
-	background-image:url(../images/icons/preloader.gif);
+	/*background-image:url(../images/icons/preloader.gif);*/
 }
 
 /***
@@ -834,7 +834,7 @@ ul,li{
 	content: '';
 	height: 59px;
 	width: 59px;
-	background: url(../images/testimonials/3.png);
+	/*background: url(../images/testimonials/3.png);*/
 }
 .testimonials-section .info{
 	position: relative;
