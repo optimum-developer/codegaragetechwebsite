@@ -11,8 +11,9 @@
                             <div class="col-md-10 col-md-offset-1">
                                 <div class="slide-content">
                                     <h2 class="tittle">Welcome to  <span style="color:rgb(1, 123, 251)">C<i class="fa fa-cog fa-spin" style="font-size: 40px;"></i>DE GARAGE</span></h2>
-                                    <p style="color: #848484;">We Build Valuable Solutions With Code</p>
-                                    
+                                    <p style="color:gainsboro">We Build Valuable Solutions With Code</p>
+                                    <p style="color:gainsboro">We guarantee you’ll be delighted with what we can do for you!<p></p>
+
                                 </div>
                             </div>
                         </div> <!--/.row-->
@@ -25,7 +26,7 @@
           //     $.notify("Thanks for contacting us. We will contact you shortly.", "success");
           // </script>
         <%#end%>
-        
+
         <!--===== SERVICE AREA =====-->
         <div id="service" class="lite-service-area section-padding">
             <div class="container">
@@ -33,10 +34,11 @@
                  <div class="row">
                     <div class="col-md-12" >
                       <div class="section-title text-center" style="    line-height: 11px;">
-                           <h2>C<i class="fa fa-cog fa-spin" style="font-size: 40px;"></i>DE GARAGE TECH - ROR Expert</h2>
+                           <h1 style="font-size:42px;"> Ruby on Rails Development Company - Hire ROR experts in Mohali</h1>
+                           <h2 style="text-align: center; font-size: 21px;padding-bottom: 0px;"><b>Best Website Development company in Mohali, india - Web & mobile App development Creative Team</b></h2>
                            <span class="border-center"></span>
-                           <p style="text-align: justify;"> We at Code Garage Tech, is a dedicated team of ROR experts that ensure you to offer the most valuable code in form of a software or a website and will turn your ideas into reality. We're Full Stack Developers, which implies that we won't let you down when we have to roll out improvements to any piece of your project. We compose future-proof backends that can speak with any kind of the year Javascript Framework. Our development services include Custom ROR web development, rails website development. </p><br>
-                           <p style="text-align: justify;"> Our website development professionals recognize the value of solid information architecture design and integrative branding that engages the customer from the first stop at your site. We are Just a firmly incorporated group with exceptionally learned developers can convey in high caliber at the speed you require. We are flexible in timings. We believe in the long-term relationship between your business and our duty. We specialize in custom PHP web application development, Wordpress, Android,Ruby on Rails, Seo Optimization and Node JS.We are flexible in timings. We believe in long term relationship for your business and our duty. </p><br>
+                           <p style="text-align: justify;">We at Code Garage Tech is a dedicated team of ROR experts in Mohali ( India) that ensure you to offer the most valuable code in form of a software or a website and will turn your ideas into reality. Code Garage Tech Organization situated in Mohali which deals with ruby on rails web development and other web application like custom PHP web application development, Wordpress, Android, Ruby on Rails, SEO Optimization and Node JS. Etc that ensures the user satisfaction. We combine our solid business technical expertise, domain experience, knowledge of latest industry trends and quality-driven work model to offer growing end-to-end web application solutions.</p><br>
+                           <p style="text-align: justify;">Our website development professionals recognize the value of solid information architecture design and integrative branding that engages the customer from the first stop at your site. We are Just a firmly incorporated group with exceptionally learned developers can convey in high caliber at the speed you require. We are flexible in timings. We believe in the long-term relationship between your business and our duty. </p><br>
 
                        </div>
                     </div>
@@ -67,7 +69,7 @@
                 </div> <!--/.row-->
             </div> <!--/.container-->
         </div>
-        
+
         <!--====== WORK AREA ======-->
         <div id="work" class="lite-work-area section-padding">
             <div class="container">
@@ -80,7 +82,7 @@
                        </div>
                     </div>
                 </div> <!--/.row-->
-                
+
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
                         <div class="single-work">
@@ -136,11 +138,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div> <!--/.row-->
             </div><!--/.container-->
         </div>
-        
+
        <!--====== FEATURE AREA ======-->
         <div class="lite-feature-area section-padding" style="padding-bottom: 10px;">
             <div class="container">
@@ -153,7 +155,7 @@
                        </div>
                     </div>
                 </div> <!--/.row-->
-                
+
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="single-feature wow fadeInUp" data-wow-delay="0.2s"  >
@@ -200,7 +202,7 @@
                 </div> <!--/.row-->
             </div> <!--/.container-->
         </div>
-        
+
         <!--====== CTA AREA ======-->
         <div class="lite-cta-area" style="padding: 10px;">
             <div class="container">
@@ -216,7 +218,7 @@
                 </div> <!--/.row-->
             </div> <!--/.container-->
         </div>
-        
+
          <!--==== TESTIMONIAL AREA =====-->
         <div id="testimonial" class="lite-testimonial-area section-padding">
             <div class="container">
@@ -229,7 +231,7 @@
                        </div>
                    </div>
                </div> <!--/.row-->
-               
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="testimonial-list">
@@ -272,13 +274,13 @@
                                    </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div> <!-- / row -->
             </div> <!--/.container-->
         </div>
-        
+
 
         <!--====== BLOG AREA ========-->
         <div id="blog" class="lite-blog-area section-padding" style="padding-bottom: 10px;">
@@ -292,7 +294,7 @@
                         </div>
                     </div>
                 </div> <!--/.row-->
-                
+
                 <div class="row">
                   <% @blogs.each do |blog|%>
                     <div class="col-sm-4">
@@ -308,7 +310,7 @@
                             <div class="post-content">
                             <%end%>
                             <%url_suffix = blog.slug || blog.id%>
-                              
+
                                 <h3><a href="blogs/<%= url_suffix %>"> <%=blog.title%></a></h3>
                                 <p class="blog-post-date"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></p>
                               <!--<div><%#= blog.text.html_safe.truncate_words(200)%>
@@ -318,7 +320,7 @@
                             </div>
                         </div>
                     </div>
-                    <%end%> 
+                    <%end%>
                 </div>
                 <div class="row">
                    <a href="https://www.google.ca/maps/place/Code+Garage+Tech/@30.7093436,76.7068689,18z/data=!4m12!1m6!3m5!1s0x390feef5abae9e3b:0xc4afa2dfe63d6ed6!2sCode+Garage+Tech!8m2!3d30.708872!4d76.706823!3m4!1s0x390feef5abae9e3b:0xc4afa2dfe63d6ed6!8m2!3d30.708872!4d76.706823"> <img src="/assets/map_new.jpg"   class="img-responsive" alt=""></a>
@@ -328,17 +330,15 @@
                  <!--/.row -->
             </div> <!--/.container -->
         </div>
-        
-        
-       
+
+
+
          <!--===== GOOGLE MAP AREA ======-->
 
-      
-       
+
+
        <!--
        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d54885.42221558016!2d76.706823!3d30.708871999999996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc4afa2dfe63d6ed6!2sCode+Garage+Tech!5e0!3m2!1sen!2sin!4v1507569957654" width="600" height="450" frameborder="0" style="border:0; width:100%" allowfullscreen></iframe>
      -->
 
        <!--===== GOOGLE MAP AREA ======-->
-      
-       

@@ -11,9 +11,9 @@ NOTE: This is main stylesheet of the template.
 
 
 /*================================================
-            Table of contents  
+            Table of contents
 ==================================================
- 
+
 00. BASE CSS
 01. PRELOADER
 02. SECTION TITLE AND SECTION PADDING
@@ -25,9 +25,9 @@ NOTE: This is main stylesheet of the template.
 08. FEATURE AREA
 09. CTA AREA
 10. TESTIMONIAL AREA
-11. STAT AREA 
-12. TEAM AREA 
-13. BLOG AREA 
+11. STAT AREA
+12. TEAM AREA
+13. BLOG AREA
 14. CONTACT AREA
 15. FOOTER AREA
 16. PROJECT AND SINGLE PROJECT PAGE
@@ -35,11 +35,11 @@ NOTE: This is main stylesheet of the template.
 18. SUBSCRIPTION AREA
 
 ====================================================
-            End table content 
+            End table content
 ===================================================*/
 
 /*================================================
-    00. BASE CSS  
+    00. BASE CSS
 ==================================================*/
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Poppins:300,400,500,600,700');
@@ -111,7 +111,7 @@ button:focus {
   height: 100%;
   width: 6px;
   display: inline-block;
-  
+
   -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
   animation: sk-stretchdelay 1.2s infinite ease-in-out;
 }
@@ -137,22 +137,22 @@ button:focus {
 }
 
 @-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
   20% { -webkit-transform: scaleY(1.0) }
 }
 
 @keyframes sk-stretchdelay {
-  0%, 40%, 100% { 
+  0%, 40%, 100% {
     transform: scaleY(0.4);
     -webkit-transform: scaleY(0.4);
-  }  20% { 
+  }  20% {
     transform: scaleY(1.0);
     -webkit-transform: scaleY(1.0);
   }
 }
 
 /*================================================
-    03. SECTION TITLE AND SECTION PADDING 
+    03. SECTION TITLE AND SECTION PADDING
 ==================================================*/
 .section-title{
     /*margin-bottom: 62px;*/
@@ -298,7 +298,7 @@ button:focus {
 }
 .slide-item-table, .slide-item-tablecell, .slide-item-tablecell div{
     height: auto;
-} 
+}
 .single-slide-item {
     background-position: center center;
     background-repeat: no-repeat;
@@ -327,7 +327,7 @@ button:focus {
     margin-bottom: 15px;
 }
 .slide-content p{
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 0px;
     line-height: 32px;
 }
@@ -580,11 +580,11 @@ button:focus {
     10. TESTIMONIAL AREA
 ==================================================*/
 .testimonial-area{
-    
+
 }
 .single-testimonial {
     background-color: #fff;
-   
+
 }
 .testimonial-author {
     display: table;
@@ -610,7 +610,7 @@ button:focus {
     margin-top: 15px;
     margin-bottom: 0;
     text-transform: capitalize;
-    
+
 }
 .testimonial-autohr-info span {
     display: block;
@@ -785,7 +785,7 @@ button:focus {
 }
 .post-content {
   padding: 20px;
-    
+
 }
 .post-content h3 {
     font-size: 20px;
@@ -908,7 +908,7 @@ button:focus {
     color: #fff;
 }*/
 .footer-text{
-   
+
 }
 .lite-footer-area p {
     margin: 7px 0 0;
@@ -1167,7 +1167,7 @@ ul.work-list li.active {
   margin: 20px 0 5px 0;
     font-size: 25px;
     font-weight: 600;
-    
+
 }
 .entry-content {
   margin-top: 10px;
@@ -1364,17 +1364,14 @@ h3.comment-form-title{
     opacity: 1;
     visibility: visible; }
 .js-result.success {
-    background-color: #1FB51D; 
+    background-color: #1FB51D;
 }
 .js-result.error {
-    background-color: #EC6F28; 
+    background-color: #EC6F28;
 }
 .input-error {
-  position: relative; 
+  position: relative;
 }
 .input-error .form-control {
-    border-color: #E22E25; 
+    border-color: #E22E25;
 }
-
-
-
