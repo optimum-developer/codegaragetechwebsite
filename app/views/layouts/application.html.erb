@@ -20,10 +20,15 @@
 
         <!-- title -->
         <% if @blog.present?%>
-          <title><%=@blog.title%></title>
-          <%desc=ActionView::Base.full_sanitizer.sanitize(@blog.text)%>
-          <%desc.delete! "\n"%>
-          <meta name="description" content='<%=desc.delete! "\r" %>'>
+          <%if @blog.title.present? && @blog.text.present?%>
+            <title><%=@blog.title%></title>
+            <%desc=ActionView::Base.full_sanitizer.sanitize(@blog.text)%>
+            <%desc.delete! "\n"%>
+            <meta name="description" content='<%=desc.delete! "\r" %>'>
+          <%else%>
+            <title>Web Development Company India-ROR(Ruby on Rails)Development-Code Garage Tech</title>
+            <meta name="description" content="Code Garage tech are awarded as the best Ruby On Rails web development Company in India.Hire ROR expert developers Now! We are Top Ruby on Rails Development Companies in India">
+          <%end%>
         <%else%>
           <title>Web Development Company India-ROR(Ruby on Rails)Development-Code Garage Tech</title>
           <meta name="description" content="Code Garage tech are awarded as the best Ruby On Rails web development Company in India.Hire ROR expert developers Now! We are Top Ruby on Rails Development Companies in India">
