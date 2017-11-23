@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   # get 'blogs/:id' =>'home#show'/
   get 'contact'=>'home#contact'
   get 'home/our_work'=>'home#our_work'
+  get 'work/project-detail-ucview'=>'home#project_detail1'
+  get 'work/project-detail-welcomeai'=>'home#project_detail2'
+  get 'work/project-detail-markets-world'=>'home#project_detail3'
   get 'home/blog_page'=>'home#blog_page'
   get 'seo-services'=>"services#seo_services"
   # get 'all_blogs'=>'home#all_blogs'

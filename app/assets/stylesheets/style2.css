@@ -747,37 +747,37 @@ ul,li{
 
 ***/
 
-.project-sextion{
-	padding: 100px 0px;
+.project-section-work{
+	padding-top: 35px;
 	background: #f5f5f8;
 }
-.project-sextion .section-title{
+.project-section-work .section-title{
 	margin-bottom: 20px;
 }
-.project-sextion .image-box{
+.project-section-work .image-box{
 	margin-bottom: 40px;
 }
-.project-sextion .image-box img{
+.project-section-work .image-box img{
 	width: 100%;
 }
-.project-sextion .image-text{
+.project-section-work .image-text{
 	position: relative;
 	padding: 18px 30px;
 	background: #ffffff;
 }
-.project-sextion .image-text h5{
+.project-section-work .image-text h5{
 	font-size: 26px;
 	line-height: 36px;
 	color: #222222;
 	font-weight: 400;
 }
-.project-sextion .image-text p{
+.project-section-work .image-text p{
 	font-size: 14px;
 	line-height: 26px;
 	color: #848484;
 	margin-bottom: 0px;
 }
-.project-sextion .image-text i{
+.project-section-work .image-text i{
 	position: absolute;
 	font-size: 18px;
 	color: #848484;
@@ -795,7 +795,7 @@ ul,li{
 	-ms-transition:all 500ms ease;
 	-o-transition:all 500ms ease;
 }
-.project-sextion .image-box:hover i{
+.project-section-work .image-box:hover i{
 	top: -22px;
 	color: #ffffff;
 	background: #5ca2da;
@@ -1788,7 +1788,7 @@ ul,li{
 	margin-top: 34px;
 }
 .project-details .project-menu{
-	margin-top: 28px;
+	/*margin-top: 28px;*/
 }
 .project-details .project-menu li{
 	font-size: 14px;
@@ -1827,25 +1827,25 @@ ul,li{
 	padding-bottom: 15px;
 	font-family: 'Unna', serif;
 }
-.project-sextion.style-two{
+.project-section-work.style-two{
 	padding: 0px 0px 80px;
 	background: #ffffff;
 }
-.project-sextion.style-two .image-gallery{
+.project-section-work.style-two .image-gallery{
 	margin: 0px;
 }
-.project-sextion.style-two .sec-title h3{
+.project-section-work.style-two .sec-title h3{
 	font-size: 32px;
 	font-weight: 400;
 	color: #222222;
 	padding-bottom: 20px;
 }
-.project-sextion.style-two .image-box{
+.project-section-work.style-two .image-box{
 	margin: 0px;
 	margin-bottom: 40px;
 	box-shadow: 0 0 5px 3px #f1f1f1;
 }
-.project-sextion.style-two .image-box:hover{
+.project-section-work.style-two .image-box:hover{
 	box-shadow: 0 0 20px 10px #f7f7f7;
 }
 

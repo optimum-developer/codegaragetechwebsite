@@ -9,6 +9,15 @@ class HomeController < ApplicationController
 	def work
 	end
 
+	def project_detail1
+	end
+
+	def project_detail2
+	end
+
+	def project_detail3
+	end
+
 	def about_us
 		@new_contact=Contact.new
 	end
@@ -22,19 +31,19 @@ class HomeController < ApplicationController
 		@blogs = Blog.all
 	end
 
-	def blog_page_1 
-	end
-    
-    def blog_page_2 
-	end
+	# def blog_page_1
+	# end
+	#
+  # def blog_page_2
+	# end
+	#
+  # def blog_page_3
+	# end
+	#
 
-    def blog_page_3
-	end
 
-   
-    
-  
-	
 
-	
+
+
+
 end

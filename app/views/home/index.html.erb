@@ -3,7 +3,7 @@
 
 
 <!--======= HOME AREA =======-->
-        <div id="home" class="lite-parallax-image-area" data-stellar-background-ratio="0.6" style="background-image: url(/assets/parallax-bg.jpg);">
+        <div id="home" class="lite-parallax-image-area" data-stellar-background-ratio="0.6" style="background-image: url(/assets/parallax-bg.jpg); height:300px">
             <div class="slide-item-table">
                 <div class="slide-item-tablecell">
                     <div class="container">
@@ -70,78 +70,62 @@
             </div> <!--/.container-->
         </div>
 
-        <!--====== WORK AREA ======-->
-        <div id="work" class="lite-work-area section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                      <div class="section-title text-center">
-                           <h2>our recent work</h2>
-                           <span class="border-center"></span>
-                           <p style="text-align: justify;">The secret to getting the desired job is to have a great portfolio. Code Garage Team has worked on top-rated projects around the world, you can check out some from the mentioned portfolio: </p>
-                       </div>
-                    </div>
-                </div> <!--/.row-->
 
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-work">
-                            <img src="/assets/portfolio1.png" alt="">
-                            <div class="item-hover">
-                                <div class="work-table">
-                                    <div class="work-tablecell">
-                                        <div class="hover-content">
-                                            <h3>Easy Personal Websites</h3>
-                                            <!--
-                                            <p>branding print</p>
-                                            <a href="single-project.html">View project</a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                       <div class="single-work">
-                            <img src="/assets/portfolio2.png" alt="">
-                            <div class="item-hover">
-                                <div class="work-table">
-                                    <div class="work-tablecell">
-                                        <div class="hover-content">
-                                            <h3>How to setup a Facebook Page for your business</h3>
-                                            <!--
-                                            <p>branding print</p>
-                                            <a href="single-project.html">View project</a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="single-work">
-                            <img src="/assets/portfolio3.png" alt="">
-                            <div class="item-hover">
-                                <div class="work-table">
-                                    <div class="work-tablecell">
-                                         <div class="hover-content">
-                                           <h3>Easy International and Multi-Currency Payments</h3>
-                                           <!--
-                                            <p>branding print</p>
-                                            <a href="single-project.html">View project</a>
-                                            -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!--============= project-section-->
 
-                </div> <!--/.row-->
-            </div><!--/.container-->
+      <section class="project-section-work">
+        <div class="container-fluid">
+            <div class="section-title text-center">
+                <h2>Our Recent Work</h2>
+                <span class="border-center"></span>
+            </div>
+            <div class="row">
+                <div class="image-gallery">
+                    <div class="image-column col-md-4 col-sm-6 col-xs-12">
+                        <div class="image-box">
+                            <figure>
+                                <a href="<%=work_project_detail_ucview_path%>"><img src="/assets/ucview.png" ></a>
+                            </figure>
+                            <div class="image-text">
+                                <a href="<%=work_project_detail_ucview_path%>"><h5>UCVIEW</h5></a>
+                                <span>Signage Software</span>
+                                <a href="<%=work_project_detail_ucview_path%>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-column col-md-4 col-sm-6 col-xs-12">
+                        <div class="image-box">
+                            <figure>
+                                <a href="<%=work_project_detail_welcomeai_path%>"><img src="/assets/welcomeai.png" height="202px" ></a>
+                            </figure>
+                            <div class="image-text">
+                                <a href="<%=work_project_detail_welcomeai_path%>"><h5>Welcome.ai</h5></a>
+                                <span>Artificial Intelligence</span>
+                                <a href="<%=work_project_detail_welcomeai_path%>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-column col-md-4 col-sm-6 col-xs-12">
+                        <div class="image-box">
+                            <figure>
+                                <a href="<%=work_project_detail_markets_world_path%>"><img src="/assets/maketing.png" ></a>
+                            </figure>
+                            <div class="image-text">
+                                <a href="<%=work_project_detail_markets_world_path%>"><h5>MARKETS WORLD</h5></a>
+                                <span>Marketing</span>
+                                <a href="<%=work_project_detail_markets_world_path%>"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="link-btn text-center"><a href="project-details.html" class="btn-style-one">load more</a></div> -->
         </div>
+    </section>
+
+
+
+
 
        <!--====== FEATURE AREA ======-->
         <div class="lite-feature-area section-padding" style="padding-bottom: 10px;">
