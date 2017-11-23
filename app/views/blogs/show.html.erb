@@ -8,14 +8,14 @@
                         <h1>BLOG</h1>
                         <div class="breadcroumb">
                             <a href="index.html"></a>
-                            
+
                             <span class="current"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!--===== SINGLE POST AREA =====-->
         <div class="blog-area section-padding">
            <div class="container">
@@ -29,30 +29,30 @@
                               <%else%>
                                 <img src="/assets/blog/blog1.jpg" class="img-responsive" alt="">
                               <%end%>
-                                
+
                             </div>
-                            
-                            
-                            
+
+
+
                            <h2><%= @blog.title %></h2></a>
                            <div class="entry-meta">
-                               <span class="posted-on"><%= @blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
+                               <span class="posted-on"><%= @blog.created_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
                                <span class="posted-by"> by: <span style="color:#3b99d5">Ajit Pandey</span></span>
                            </div>
                            <div class="entry-content">
-                           
-                           
-                            
+
+
+
 
                                <p style="text-align: justify;"><%= @blog.text.html_safe%></p>
-                                
 
-                                                          
-                             
-                             
-                             
+
+
+
+
+
                            </div>
-                           
+
                        </div>
                        <% if false %>
                        <div class="comments-area"> <!-- comments area -->
@@ -154,19 +154,19 @@
                         </form>
                       -->
                     </div>
-                    
+
                     <div class="widget recent-post"> <!-- widget single -->
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
                             <% @blogs.each do |blog| %>
                             <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
                             <% end  %>
-                            
-                            
+
+
                         </ul>
                     </div>
                     <!--
-                    <div class="widget category"> 
+                    <div class="widget category">
                         <h3 class="widget-title">Categories</h3>
                         <ul>
                             <li><a href="#">Web Design <span>(5)</span></a></li>
@@ -178,7 +178,7 @@
                     </div>
                   -->
                     <!--
-                    <div class="widget tags"> 
+                    <div class="widget tags">
                        <h3 class="widget-title">tags</h3>
                         <ul>
                             <li><a href="#">Design</a></li>
@@ -199,6 +199,3 @@
                </div>
            </div>
         </div>
-                       
-
-                       
