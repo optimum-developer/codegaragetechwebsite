@@ -60,19 +60,21 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="contact-form-area">
-                            <% if flash[:notice]%>
-                                <% if flash[:notice]=="successfull" %>
-                                    <script>
-                                        $.notify("Thanks for contacting us. We will contact you shortly.", "success");
-                                    </script>
-                                <%else%>
-                                    <%flash[:notice].each do |f|%>
-                                        <script>
-                                            $.notify("<%=f%>")
-                                        </script>
-                                    <%end%>
-                                        
-                                <% end %>
+                            <%if flash[:notice]!="Signed in successfully."%>
+                              <% if flash[:notice]%>
+                                  <% if flash[:notice]=="successfull" %>
+                                      <script>
+                                          $.notify("Thanks for contacting us. We will contact you shortly.", "success");
+                                      </script>
+                                  <%else%>
+                                      <%flash[:notice].each do |f|%>
+                                          <script>
+                                              $.notify("<%=f%>")
+                                          </script>
+                                      <%end%>
+
+                                  <% end %>
+                              <%end%>
                             <%end%>
                             <%= form_for @new_contact do |f| %>
 
