@@ -36,8 +36,10 @@
 
                            <h2><%= @blog.title %></h2></a>
                            <div class="entry-meta">
-                               <span class="posted-on"><%= @blog.created_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
-                               <span class="posted-by"> by: <span style="color:#3b99d5">Ajit Pandey</span></span>
+                               <%if @blog.date_blog.present?%>
+                                 <span class="posted-on">Posted on:<%= @blog.date_blog.to_time.strftime(' %e  %B %Y ')  %></span>
+                                 <span class="posted-by"> by: <span style="color:#3b99d5">Ajit Pandey</span></span>
+                               <%end%>
                            </div>
                            <div class="entry-content">
 

@@ -5,7 +5,7 @@
                     <div class="col-md-12">
                         <h1>List of  blogs</h1>
                         <div class="breadcroumb">
-                            
+
                         </div>
                     </div>
                 </div>
@@ -33,8 +33,10 @@
                            <%url_suffix = blog.slug || blog.id%>
                            <a href="blogs/<%= url_suffix %>"><h2><%= blog.title %></h2></a>
                            <div class="entry-meta">
-                               <span class="posted-on"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>: <a href="#"> </a></span>
-                               <span class="posted-by">Posted by: <span style="color:#3b99d5">Ajit Pandey</span></span>
+                             <%if blog.date_blog.present?%>
+                               <span class="posted-on">Posted on:<%= blog.date_blog.to_time.strftime(' %e  %B %Y ')  %></span>
+                               <span class="posted-by"> by: <span style="color:#3b99d5">Ajit Pandey</span></span>
+                             <%end%>
                            </div>
                            <div class="entry-content">
                               <p style="text-align: justify;"><%= truncate(blog.text.html_safe,length:500, :escape => false)%></p>
@@ -44,11 +46,11 @@
                                  <%= link_to('Delete',blog_path(blog), method: :delete,class: "read-more-btn") %>
                               <%else%>
                                 <a class="read-more-btn" href="blogs/<%= url_suffix %>">Read More</a>
-                              
-                              <%end%> 
-                           </div> 
+
+                              <%end%>
+                           </div>
                              <hr>
-                             
+
                            <%end%>
                        </div>
                    </div>
@@ -57,21 +59,15 @@
                       <h3 class="widget-title">Recent Posts</h3>
                       <ul>
                         <%@blogs.each do |blog| %>
-                           <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>                       
+                           <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
                         <%end%>
                       </ul>
                     </div>
                    </div>
-                  
+
                 </div>
             </div>
       </div>
 
-               <%= will_paginate @blogs, class: "styled-pagination"%>  
-               <br>    
-                
-     
-     
-
-
-
+               <%= will_paginate @blogs, class: "styled-pagination"%>
+               <br>

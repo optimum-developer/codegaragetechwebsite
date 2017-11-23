@@ -2,14 +2,14 @@
         <!--====== CONTACT INFO AREA ======-->
         <div id="contact" class="contact-info-area section-padding">
             <div class="container">
-                 
+
                <div class="row"  >
                     <div class="col-md-8 col-md-offset-2">
                         <h2>Edit Blog</h2>
                         <br>
                         <div class="contact-form-a  rea">
                             <%= form_for @blog, :url => {:action => "update"} do |f| %>
-                            
+
                                 <div class="messages"></div>
                                 <div class="controls">
                                     <div class="row" >
@@ -24,7 +24,7 @@
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
-                                        
+
                                     </div> <!--/.row-->
 
                                     </div> <!--/.row-->
@@ -33,6 +33,14 @@
                                         <div class="col-md-12">
                                             <div class="form-group text-area">
                                             <%= f.cktext_area :text %>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group text-area">
+                                              <input type="date" name="blog[date_blog]" value="<%=Date.today%>" id="blog_date_blog" style="width: 300px; text-align: center; background-color: gainsboro; color: black;"><br>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                         </div>
