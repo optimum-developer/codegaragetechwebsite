@@ -42,7 +42,6 @@ before_action :authenticate_admin!, only: [ :create, :new, :edit]
 
   private
     def blog_params
-      debugger
       params.require(:blog).permit(:title, :text,:image,:date_blog)
     end
 end
