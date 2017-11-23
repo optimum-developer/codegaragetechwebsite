@@ -296,7 +296,11 @@
                             <%url_suffix = blog.slug || blog.id%>
 
                                 <h3><a href="blogs/<%= url_suffix %>"> <%=blog.title%></a></h3>
-                                <p class="blog-post-date"> <%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></p>
+                                <p class="blog-post-date">
+                                  <% if blog.date_blog.present?%>
+                                    <span style="color:grey">Posted at:<%= blog.date_blog.to_time.strftime(' %e  %B %Y ')  %></span>
+                                  <%end%>
+                                </p>
                               <!--<div><%#= blog.text.html_safe.truncate_words(200)%>
                               </div>--!>
                                <!--  <a class="read-more-btn" href="<%=blog_path(blog)%>">Read More</a> -->
