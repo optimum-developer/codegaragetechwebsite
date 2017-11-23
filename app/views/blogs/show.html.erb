@@ -160,8 +160,14 @@
                     <div class="widget recent-post"> <!-- widget single -->
                         <h3 class="widget-title">Recent Posts</h3>
                         <ul>
-                            <% @blogs.each do |blog| %>
-                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%><span><%= blog.updated_at.to_time.strftime(' %e  %B %Y at %l:%M %p')  %></span></a></li>
+                            <% Blog.all.last(5).each do |blog| %>
+                            <li><a href="<%=blog_path(blog)%>"><%=blog.title%>
+                            <span>
+                              <%if blog.date_blog.present?%>
+                                <%= blog.date_blog.to_time.strftime(' %e  %B %Y at %l:%M %p')  %>
+                              <%end%>
+                            </span>
+                            </a></li>
                             <% end  %>
 
 
