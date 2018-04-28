@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'about-us'=>'home#about_us'
   # get 'blogs/:id' =>'home#show'/
   get 'contact'=>'home#contact'
+  get 'careers'=>'home#careers'
   get 'home/our_work'=>'home#our_work'
   get 'work/project-detail-ucview'=>'home#project_detail1'
   get 'work/project-detail-welcomeai'=>'home#project_detail2'
@@ -28,6 +29,8 @@ Rails.application.routes.draw do
   resources :blogs
   resources :contacts
   resources :subscribes
+  resources :candidates
+
 
   get '*a', :to => 'errors#not_found'
 

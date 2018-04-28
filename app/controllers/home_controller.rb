@@ -27,6 +27,10 @@ class HomeController < ApplicationController
 		@new_contact=Contact.new
 	end
 
+	def careers
+		@new_candidate =Candidate.new
+	end
+
 	def all_blogs
 		@blogs = Blog.all
 	end

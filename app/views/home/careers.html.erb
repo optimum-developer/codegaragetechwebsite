@@ -1,0 +1,123 @@
+
+        <!--====== candidate INFO AREA ======-->
+        <div id="candidate" class="contact-info-area section-padding">
+            <div class="container">
+               <div class="row">
+                   <div class="col-md-8 col-md-offset-2" style="padding-top: 61px;">
+                       <div class="section-title text-center">
+                           <h2>Career</h2>
+                           <span class="border-center"></span>
+                       </div>
+                   </div>
+               </div> <!--/.row-->
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="contact-form-area">
+                            <%if flash[:notice]!="Signed in successfully."%>
+                              <% if flash[:notice]%>
+                                  <% if flash[:notice]=="successfull" %>
+                                      <script>
+                                          $.notify("Thanks for sharing your details. We will contact you shortly.", "success");
+                                      </script>
+                                  <%else%>
+                                      <%flash[:notice].each do |f|%>
+                                          <script>
+                                              $.notify("<%=f%>")
+                                          </script>
+                                      <%end%>
+
+                                  <% end %>
+                              <%end%>
+                            <%end%>
+                            <%= form_for @new_candidate, url: candidates_path, html: { multipart: true } do |f| %>
+
+                                <div class="messages"></div>
+                                <div class="controls">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_first_name" type="text" name="candidate[first_name]" class="form-control" placeholder="First Name*" required="required" data-error="First Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                 <input id="form_last_name" type="text" name="candidate[last_name]" class="form-control" placeholder="Last Name*" required="required" data-error="Last Name is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_email" type="email" name="candidate[email]" class="form-control" placeholder="Email*" required="required" data-error="Valid email is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_phone_number" type="number" name="candidate[phone_number]" class="form-control" placeholder="Phone Number*" required="required" data-error="Phone Number is required.">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_job_position" type="text" name="candidate[job_position]" class="form-control" placeholder="Job Position">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_experience" type="number" name="candidate[experience]" class="form-control" placeholder="Experience">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_current_salary" type="text" name="candidate[current_salary]" class="form-control" placeholder="Current Salary">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <input id="form_expected_salary" type="text" name="candidate[expected_salary]" class="form-control" placeholder="Expected Salary">
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+
+                            
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group text-area">
+                                                <textarea id="form_message" name="candidate[resume_detail]" class="form-control" placeholder="Paste resume here" rows="7" data-error="Please,leave us a message."></textarea>
+                                                <div class="help-block with-errors"></div>
+                                            </div>
+                                        </div>
+                                    </div> <!--/.row-->
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="file" name="candidate[document]" placeholder="Upload resume">
+
+                                        </div>
+                                    </div> <br><!--/.row-->
+
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <input type="submit" class="filled-btn" value="Send message" >
+                                        </div>
+                                    </div> <!--/.row-->
+                                </div>
+                            <%end%>
+                        </div>
+                    </div>
+                </div> <!--/.row-->
+            </div><!--/.container-->
+        </div>
