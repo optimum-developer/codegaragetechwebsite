@@ -7,12 +7,15 @@ class MailUserMailer < ApplicationMailer
 
 
 	def send_mail_to_admin
-		mail(:to=>"hr@codegaragetech.com",:subject=>"Contact Request")
+		mail(:to=>"amandeepkaur@codegaragetech.com",:subject=>"Contact Request")
 	end
 
 	def send_resume_to_admin(candidate)
 		@new_candidate = candidate
-		mail(:to=>"hr@codegaragetech.com", :subject=>"Codegaragetech - Candidate's resume")
+		# if candidate.document.present?
+		# 	attachments['resume.pdf'] = File.read(candidate.document.url)
+		# end
+		mail(:to=>"hr@codegaragetech.com", :subject=>"Codegaragetech - Candidate for job")
 	end
 
 
