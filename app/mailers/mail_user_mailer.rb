@@ -19,8 +19,8 @@ class MailUserMailer < ApplicationMailer
 				attachments[file_name] = File.read(resume_path)
 			end
 		end
-		mail(:to=>"amandeepkaur@codegaragetech.com", :subject=>"Codegaragetech - Candidate for job")
-		# mail(:to=>"hr@codegaragetech.com", :subject=>"Codegaragetech - Candidate for job")
+		# mail(:to=>"amandeepkaur@codegaragetech.com", :subject=>"Codegaragetech - Candidate for job")
+		mail(:to=>"hr@codegaragetech.com", :subject=>"Codegaragetech - Candidate for job")
 	end
 
 
